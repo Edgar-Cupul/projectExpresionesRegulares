@@ -57,9 +57,13 @@ function Animador(frames, direc, animacion, closer) {
         var contadorDeFrames = 1;
 
         const inputVelocidad = document.querySelector("#" + animacion + "v");
-        const salidaVelocidad = document.querySelector("#out-" + animacion + "v"); //Se completa con out, debe ser similar a la entrada.
+        //const salidaVelocidad = document.querySelector("#out-" + animacion + "v"); //Se completa con out, debe ser similar a la entrada.
+        const botonStoper = document.getElementById('' + closer);
+
+        //Control de reproducción
+        const botonAvanzar = document.querySelector("#boton-" + animacion + "-toFront");
         const botonVelocidad = document.querySelector("#boton-" + animacion);
-        const botonStoper = document.getElementById(''+closer);
+        const botonRetroceder = document.querySelector("#boton-" + animacion + "-toBack");
 
         botonStoper.onclick = () => {
             contadorDeFrames = 1;
@@ -71,20 +75,27 @@ function Animador(frames, direc, animacion, closer) {
             //reiniciamos el contador de frames al mover algo acá.
             contadorDeFrames = 1;
 
-            salidaVelocidad.innerHTML = inputVelocidad.value;
+            //salidaVelocidad.innerHTML = inputVelocidad.value;
             velocidadAnimacion = parseInt(inputVelocidad.value);
             control.reset(parseInt(inputVelocidad.value));
-            //alert("Dato recibido:"+parseInt(inputVelocidad.value));
         }
 
         botonVelocidad.onclick = () => {
-            if(botonVelocidad.innerHTML == "Pausa"){
+            if (botonVelocidad.innerHTML == "Pausa") {
                 control.stop();
                 botonVelocidad.innerHTML = "Reanudar";
-            }else{
+            } else {
                 control.start();
                 botonVelocidad.innerHTML = "Pausa";
             }
+        }
+
+        botonAvanzar.onclick = () => {
+            contadorDeFrames = contadorDeFrames + 1;
+        }
+
+        botonRetroceder.onclick = () => {
+            contadorDeFrames = contadorDeFrames - 1;
         }
 
         var maxValue = parseInt(inputVelocidad.max);
@@ -103,7 +114,7 @@ function Animador(frames, direc, animacion, closer) {
             var limite = 0;
             var intervalo
 
-            var canvas = document.getElementById(animacion+"c");
+            var canvas = document.getElementById(animacion + "c");
             var ctx = canvas.getContext('2d');
 
             if (contadorDeFrames == frames + 2) {
@@ -115,7 +126,7 @@ function Animador(frames, direc, animacion, closer) {
 
             contadorDeFrames += 1;
 
-            if (contadorDeFrames > frames+1) {
+            if (contadorDeFrames > frames + 1) {
                 control.stop();
                 //alert(velocidadAnimacion);
                 //alert("Proceso concluido.")
