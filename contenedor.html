@@ -3,18 +3,21 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Expresiones Regulares</title>
 	<link rel="stylesheet" href="estilos.css">
 	<link rel="stylesheet" href="css/all.min.css">
 	<link rel="stylesheet" href="estilosModals.css">
 	<link rel="stylesheet" href="estilosActividades.css">
 	<link rel="stylesheet" href="estilosEval.css">
+	<link rel="stylesheet" href="estilosCanvas.css">
 	<link rel="shortcut icon" href="img/iconBOTER.png" type="image/x-icon">
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="js/scriptMostrarArticles.js"></script>
 	<script src="js/scriptFuncionesGAlfabetos.js"></script>
+	<script src="js/scriptAnimador.js"></script>
 </head>
 
 <!-- EMPIEZA EL CUERPO DE MI PAGINA--------------------------------------------------- -->
@@ -23,7 +26,7 @@
 
 	<div class="contenedorVertical"></div>
 
-	<!-- CREO UN CONTENEDOR------------------------------------------------------ -->	
+	<!-- CREO UN CONTENEDOR------------------------------------------------------ -->
 
 	<div class="contenedor">
 		<audio id="clicsTab" src="audio/sonido.wav"></audio>
@@ -31,13 +34,19 @@
 		<audio id="clicsRegresar" src="audio/clicRegresar.wav"></audio>
 		<audio id="clicsAnimaciones" src="audio/clicReproducir.wav"></audio>
 
-		
-		<!-- CREO TAB DE NAVEGACIÓN PRINCIPAL----------------------------------------- -->	
-		<ul class="tabs">		
-			<li><a onclick="document.getElementById('clicsTab').play()" href="#tab1"><span class="fas fa-home"></span><span class="tab-text">Inicio</span></a></li>
-			<li><a onclick="document.getElementById('clicsTab').play()" href="#tab2"><span class="fas fa-bars"></span><span class="tab-text">Menú</span></a></li>
-			<li><a onclick="document.getElementById('clicsTab').play()" href="#tab3"><span class="fas fa-users"></span><span class="tab-text">Créditos</span></a></li>
-			<li><a onclick="document.getElementById('clicsTab').play()" href="#tab4"><span class="fas fa-wrench"></span><span class="tab-text">Opciones</span></a></li>
+
+		<!-- CREO TAB DE NAVEGACIÓN PRINCIPAL----------------------------------------- -->
+		<ul class="tabs">
+			<li><a onclick="document.getElementById('clicsTab').play()" href="#tab1"><span
+						class="fas fa-home"></span><span class="tab-text">Inicio</span></a></li>
+			<li><a onclick="document.getElementById('clicsTab').play()" href="#tab2"><span
+						class="fas fa-bars"></span><span class="tab-text">Menú</span></a></li>
+			<li><a onclick="document.getElementById('clicsTab').play()" href="#tab3"><span
+						class="fas fa-users"></span><span class="tab-text">Créditos</span></a></li>
+			<li><a onclick="document.getElementById('clicsTab').play()" href="#tab4"><span
+						class="fas fa-wrench"></span><span class="tab-text">Opciones</span></a></li>
+			<li><a onclick="document.getElementById('clicsTab').play()" href="#tab5"><span
+						class="fas fa-wrench"></span><span class="tab-text">Bibliografía</span></a></li>
 		</ul>
 
 		<!-- EMPIEZA TODAS MIS SECCIONES------------------------------------------------------ -->
@@ -61,10 +70,14 @@
 				<!-- CREO TAB DE NAVEGACIÓN MENU----------------------------------------- -->
 				<br>
 				<ul class="buttons">
-					<li><a onclick="document.getElementById('clicsMenu').play()" href="#button1"><span class="fas fa-book"></span><span class="tab-text">Teoría</span></a></li>
-					<li><a onclick="document.getElementById('clicsMenu').play()" href="#button2"><span class="fas fa-chalkboard"></span><span class="tab-text">Ejemplos</span></a></li>
-					<li><a onclick="document.getElementById('clicsMenu').play()" href="#button3"><span class="fas fa-edit"></span><span class="tab-text">Actividades</span></a></li>
-					<li><a onclick="document.getElementById('clicsMenu').play()" href="#button4"><span class="fas fa-clipboard"></span><span class="tab-text">Evaluación</span></a></li>
+					<li><a onclick="document.getElementById('clicsMenu').play()" href="#button1"><span
+								class="fas fa-book"></span><span class="tab-text">Teoría</span></a></li>
+					<li><a onclick="document.getElementById('clicsMenu').play()" href="#button2"><span
+								class="fas fa-chalkboard"></span><span class="tab-text">Ejemplos</span></a></li>
+					<li><a onclick="document.getElementById('clicsMenu').play()" href="#button3"><span
+								class="fas fa-edit"></span><span class="tab-text">Actividades</span></a></li>
+					<li><a onclick="document.getElementById('clicsMenu').play()" href="#button4"><span
+								class="fas fa-clipboard"></span><span class="tab-text">Evaluación</span></a></li>
 				</ul>
 			</article>
 
@@ -85,8 +98,18 @@
 				<center><audio src="audio/musicaFondo.mp3" controls type="audio/mpeg" loop="true"></audio></center>
 			</article>
 
+			<!--SECCION BIBIOGRAFÍA-------------------------------------------------->
+			<article id="tab5">
+				<h1>Bibliografía</h1>
+				<center>Recursos bibliográficos utilizados en esta aplicación:.</center>
+				<p>- Kelley, D. (1995). Teoría de autómatas y lenguajes formales. Madrid: Prentice Hall.</p>
+				<p>- Hopcroft, J. E., Motwani, R., & Ullman, J. D. (2008). Introduction to Automata Theory, Languages,
+					and Computation.
+					(3rd ed.). Addison Wesley.</p>
+			</article>
+
 			<!-- COMIENZA SECCIONES TAB DE NAVEGACIÓN DE MENU----------------------------------------- -->
-			
+
 			<!-- SECCION TEORIA----------------------------------------- -->
 			<article id="button1">
 				<h1>Introducción</h1>
@@ -99,24 +122,30 @@
 				<br>
 				<!-- CREO TAB DE NAVEGACIÓN MENU 2----------------------------------------- -->
 				<ul class="buttonsTeoria">
-					<li><a onclick="document.getElementById('clicsMenu').play()" href="#buttonT1"><span class="tab-text">Operaciones con las ER</span></a></li>
-					<li><a onclick="document.getElementById('clicsMenu').play()" href="#buttonT2"><span class="tab-text">Precedencia de los Operadores</span></a></li>
-					<li><a onclick="document.getElementById('clicsMenu').play()" href="#buttonT3"><span class="tab-text">Condiciones para construir ER</span></a></li>
+					<li><a onclick="document.getElementById('clicsMenu').play()" href="#buttonT1"><span
+								class="tab-text">Operaciones con las ER</span></a></li>
+					<li><a onclick="document.getElementById('clicsMenu').play()" href="#buttonT2"><span
+								class="tab-text">Precedencia de los Operadores</span></a></li>
+					<li><a onclick="document.getElementById('clicsMenu').play()" href="#buttonT3"><span
+								class="tab-text">Condiciones para construir ER</span></a></li>
 				</ul>
 			</article>
 
 			<!-- SECCION EJEMPLOS----------------------------------------- -->
 
 			<article id="button2">
-				<h1>Ejemplos de Expresiones Regulares</h1>	
-				<p>Bienvenido a la sección de ejemplos, aqui podrás encontrar algunas animaciones que te ayudarán a una mejor comprensión de las Expresiones Regulares</p>
+				<h1>Ejemplos de Expresiones Regulares</h1>
+				<p>Bienvenido a la sección de ejemplos, aqui podrás encontrar algunas animaciones que te ayudarán a una
+					mejor comprensión de las Expresiones Regulares</p>
 				<ul class="buttonsEjER">
-					<li><a onclick="document.getElementById('clicsMenu').play()" href="#ejemplosER"><span class="tab-text">Animaciones ER</span></a></li>
+					<li><a onclick="document.getElementById('clicsMenu').play()" href="#ejemplosER"><span
+								class="tab-text">Animaciones ER</span></a></li>
 				</ul>
-				
+
 				<p>Te proporcionamos un generador de ER ya predefinidas para practicar</p>
 				<ul class="buttonsEjER">
-					<li><a onclick="document.getElementById('clicsMenu').play()" href="#alfabeto0"><span class="tab-text">Generador ER</span></a></li>
+					<li><a onclick="document.getElementById('clicsMenu').play()" href="#alfabeto0"><span
+								class="tab-text">Generador ER</span></a></li>
 				</ul>
 			</article>
 
@@ -124,22 +153,25 @@
 			<article id="button3">
 				<h1>Actividades</h1>
 				<br>
-				<p>A continuación se te presenta una actividad a modo de cuestionario, para que puedas retroalimentarte de lo visto en la sección de teoría y ejemplos</p>
+				<p>A continuación se te presenta una actividad a modo de cuestionario, para que puedas retroalimentarte
+					de lo visto en la sección de teoría y ejemplos</p>
 				<br>
-				<div id="buttonStart" class="start_btn"><center><button>Comenzar</button></center></div>
+				<div id="buttonStart" class="start_btn">
+					<center><button>Comenzar</button></center>
+				</div>
 
 				<!-- Info Box -->
 				<div class="info_box">
 					<div class="info-title"><span>Algunas reglas de esta actividad</span></div>
 					<div class="info-list">
-						<div class="info">1. Tendrá solo <span>15 segundos</span>  para cada pregunta.</div>
-						
+						<div class="info">1. Tendrá solo <span>15 segundos</span> para cada pregunta.</div>
+
 						<div class="info">2. Al seleccionar su respuesta, no se puede deshacer.</div>
-						
+
 						<div class="info">3. No puede seleccionar ninguna opción una vez que pasa el tiempo.</div>
-						
+
 						<div class="info">4. No puede salir del cuestionario mientras juega.</div>
-						
+
 						<div class="info">5. Obtendrá puntos según sus respuestas correctas.</div>
 					</div>
 					<div class="buttons">
@@ -166,7 +198,7 @@
 							<!-- Here I've inserted options from JavaScript -->
 						</div>
 						<div id="divRetro" class="retro_alimentacion">
-							
+
 						</div>
 					</section>
 
@@ -182,85 +214,90 @@
 
 				<!-- Result Box -->
 				<div id="box" class="result_box">
-	        		<!--<div class="icon">
+					<!--<div class="icon">
 	           		 <i class="fas fa-crown"></i>
 	        		</div>-->
-	       			<div class="complete_text">¡Has completado el cuestionario!</div>
-	        		<div class="score_text">
-	        		<!-- Here I've inserted Score Result from JavaScript -->
-	        		</div>
-	       			 <div class="buttons">
-	        			<button class="restart">Reiniciar</button>
-	        			<button class="quit">Salir</button>
-	        		</div>
-    			</div>
+					<div class="complete_text">¡Has completado el cuestionario!</div>
+					<div class="score_text">
+						<!-- Here I've inserted Score Result from JavaScript -->
+					</div>
+					<div class="buttons">
+						<button class="restart">Reiniciar</button>
+						<button class="quit">Salir</button>
+					</div>
+				</div>
 			</article>
 
 			<!-- SECCION EVALUACIÓN----------------------------------------- -->
 			<article id="button4">
 				<h1 id="cintaH1">Evaluación</h1>
-				<div id="seccion" class = "main-wrapper">
-					<section id = "header">
-						<div class = "title-wrapper">
-							<div class = "quiz-title">
-								<h5 id="instruccionesH5">Lee con atención cada ejercicio y selecciona el número correcto en cada caso.</h5>
+				<div id="seccion" class="main-wrapper">
+					<section id="header">
+						<div class="title-wrapper">
+							<div class="quiz-title">
+								<h5 id="instruccionesH5">Lee con atención cada ejercicio y selecciona el número correcto
+									en cada caso.</h5>
 							</div>
 
 							<!-- Score board -->
-							<div class = "score-board">
-								<center><h3 id="puntuacionH3">Puntuación: 
-									<span id = "score">
-										<!-- 0 -->
-									</span>
-								</h3></center>
+							<div class="score-board">
+								<center>
+									<h3 id="puntuacionH3">Puntuación:
+										<span id="score">
+											<!-- 0 -->
+										</span>
+									</h3>
+								</center>
 							</div>
 						</div>
 					</section>
 
-					<section id = "question-section">
-						<div class = "question-box">
-							<center><h4 id = "question">Which one is the first search engine in internet?</h4></center>
+					<section id="question-section">
+						<div class="question-box">
+							<center>
+								<h4 id="question">Which one is the first search engine in internet?</h4>
+							</center>
 						</div>
 
-						<div class = "play-btn">
-							<h2 id = "play" class = "btn-hover-effect">Iniciar</h2>
+						<div class="play-btn">
+							<h2 id="play" class="btn-hover-effect">Iniciar</h2>
 						</div>
 					</section>
 
-					<section id = "option-section">
-						<div class = "option-wrapper">
-							<div class = "option-left">
-								<div class = "option-container">
-									<div class = "option-box">
-										<button type = "button" id = "opt-btn">
+					<section id="option-section">
+						<div class="option-wrapper">
+							<div class="option-left">
+								<div class="option-container">
+									<div class="option-box">
+										<button type="button" id="opt-btn">
 											1
 										</button>
-										<h4 class = "option-text">Google</h4>
+										<h4 class="option-text">Google</h4>
 									</div>
 
-									<div class = "option-box">
-										<button type = "button" id = "opt-btn">
+									<div class="option-box">
+										<button type="button" id="opt-btn">
 											2
 										</button>
-										<h4 class = "option-text">Archie</h4>
+										<h4 class="option-text">Archie</h4>
 									</div>
 								</div>
 							</div>
 
-							<div class = "option-right">
-								<div class = "option-container">
-									<div class = "option-box">
-										<button type = "button" id = "opt-btn">
+							<div class="option-right">
+								<div class="option-container">
+									<div class="option-box">
+										<button type="button" id="opt-btn">
 											3
 										</button>
-										<h4 class = "option-text">Altavista</h4>
+										<h4 class="option-text">Altavista</h4>
 									</div>
 
-									<div class = "option-box">
-										<button type = "button" id = "opt-btn">
+									<div class="option-box">
+										<button type="button" id="opt-btn">
 											4
 										</button>
-										<h4 class = "option-text">WAIS</h4>
+										<h4 class="option-text">WAIS</h4>
 									</div>
 								</div>
 							</div>
@@ -268,11 +305,13 @@
 					</section>
 
 
-					<section id="final-section" class = "exit-section">
-						<center><div class = "exit-btn">
-							<h2 id = "exit" class = "btn-hover-effect" style="display: inline;" >Reiniciar</h2>
-							<a href="contenedor.html" class="botonSalir" ><b>Salir</b></a>
-						</div></center>
+					<section id="final-section" class="exit-section">
+						<center>
+							<div class="exit-btn">
+								<h2 id="exit" class="btn-hover-effect" style="display: inline;">Reiniciar</h2>
+								<a href="contenedor.html" class="botonSalir"><b>Salir</b></a>
+							</div>
+						</center>
 					</section>
 				</div>
 			</article>
@@ -287,13 +326,17 @@
 				<p>Las operaciones definidas para las ER son:</p>
 
 				<ul class="buttonsOER">
-					<li><a onclick="document.getElementById('clicsMenu').play()" href="#buttonO1"><span class="tab-text">Unión</span></a></li>
-					<li><a onclick="document.getElementById('clicsMenu').play()" href="#buttonO2"><span class="tab-text">Concatenación</span></a></li>
-					<li><a onclick="document.getElementById('clicsMenu').play()" href="#buttonO3"><span class="tab-text">Cierre de estrella</span></a></li>
+					<li><a onclick="document.getElementById('clicsMenu').play()" href="#buttonO1"><span
+								class="tab-text">Unión</span></a></li>
+					<li><a onclick="document.getElementById('clicsMenu').play()" href="#buttonO2"><span
+								class="tab-text">Concatenación</span></a></li>
+					<li><a onclick="document.getElementById('clicsMenu').play()" href="#buttonO3"><span
+								class="tab-text">Cierre de estrella</span></a></li>
 				</ul>
 				<br>
 				<ul class="buttonsRegresar">
-					<li><a onclick="document.getElementById('clicsRegresar').play()" href="#button1"><span class="fas fa-undo"></span><span class="tab-text">Regresar</span></a></li>
+					<li><a onclick="document.getElementById('clicsRegresar').play()" href="#button1"><span
+								class="fas fa-undo"></span><span class="tab-text">Regresar</span></a></li>
 				</ul>
 			</article>
 
@@ -301,8 +344,8 @@
 			<article id="buttonT2">
 				<h1>Precedencia de operadores</h1>
 				<p>
-					Se usan paréntesis para indicar la precedencia de las 
-					operaciones, hay que tener en cuenta el siguiente 
+					Se usan paréntesis para indicar la precedencia de las
+					operaciones, hay que tener en cuenta el siguiente
 					orden de precedencia :
 				</p>
 				<p>
@@ -312,14 +355,16 @@
 					<br>
 					3ª.- Operación concatenación
 					<br>
-					4ª.- Unión 
+					4ª.- Unión
 				</p>
 				<ul class="buttonsAnimaciones">
-					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir6"><span class="fas fa-play"></span><span class="tab-text">Precedencia</span></a></li>
+					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir6"><span
+								class="fas fa-play"></span><span class="tab-text">Precedencia</span></a></li>
 				</ul>
 
 				<ul class="buttonsRegresar">
-					<li><a onclick="document.getElementById('clicsRegresar').play()" href="#button1"><span class="fas fa-undo"></span><span class="tab-text">Regresar</span></a></li>
+					<li><a onclick="document.getElementById('clicsRegresar').play()" href="#button1"><span
+								class="fas fa-undo"></span><span class="tab-text">Regresar</span></a></li>
 				</ul>
 			</article>
 
@@ -338,21 +383,25 @@
 				</p>
 				<br>
 				<ul class="buttonsAnimaciones">
-					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir7"><span class="fas fa-play"></span><span class="tab-text">Completez 1</span></a></li>
-					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir8"><span class="fas fa-play"></span><span class="tab-text">Completez 2</span></a></li>
-					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir9"><span class="fas fa-play"></span><span class="tab-text">Corrección</span></a></li>
+					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir7"><span
+								class="fas fa-play"></span><span class="tab-text">Completez 1</span></a></li>
+					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir8"><span
+								class="fas fa-play"></span><span class="tab-text">Completez 2</span></a></li>
+					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir9"><span
+								class="fas fa-play"></span><span class="tab-text">Corrección</span></a></li>
 				</ul>
 
 				<ul class="buttonsRegresar">
-					<li><a onclick="document.getElementById('clicsRegresar').play()" href="#button1"><span class="fas fa-undo"></span><span class="tab-text">Regresar</span></a></li>
+					<li><a onclick="document.getElementById('clicsRegresar').play()" href="#button1"><span
+								class="fas fa-undo"></span><span class="tab-text">Regresar</span></a></li>
 				</ul>
 			</article>
 
 			<!-- COMIENZA SECCIONES TAB DE NAVEGACIÓN DE MENU - TEORIA - OPERACIONES------------ -->
-			
+
 			<!-- SECCION UNIÓN----------------------------------------- -->
 			<article id="buttonO1">
-				<h1>Unión  (α + β)</h1>
+				<h1>Unión (α + β)</h1>
 
 				<p>
 					Si α y β son dos expresiones regulares, α + β denota la unión entre ellas, que se lee como α
@@ -365,12 +414,16 @@
 				</h4>
 				<br>
 				<ul class="buttonsAnimaciones">
-					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir1"><span class="fas fa-play"></span><span class="tab-text">ER Unidas</span></a></li>
-					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir2"><span class="fas fa-play"></span><span class="tab-text">ER con Unión</span></a></li>
-					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir3"><span class="fas fa-play"></span><span class="tab-text">ER sin Unión</span></a></li>
+					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir1"><span
+								class="fas fa-play"></span><span class="tab-text">ER Unidas</span></a></li>
+					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir2"><span
+								class="fas fa-play"></span><span class="tab-text">ER con Unión</span></a></li>
+					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir3"><span
+								class="fas fa-play"></span><span class="tab-text">ER sin Unión</span></a></li>
 				</ul>
 				<ul class="buttonsRegresar">
-					<li><a onclick="document.getElementById('clicsRegresar').play()" href="#buttonT1"><span class="fa fa-undo"></span><span class="tab-text">Regresar</span></a></li>
+					<li><a onclick="document.getElementById('clicsRegresar').play()" href="#buttonT1"><span
+								class="fa fa-undo"></span><span class="tab-text">Regresar</span></a></li>
 				</ul>
 			</article>
 
@@ -387,10 +440,12 @@
 				</h4>
 				<br>
 				<ul class="buttonsAnimaciones">
-					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir4"><span class="fas fa-play"></span><span class="tab-text">ER Concatenadas</span></a></li>
+					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir4"><span
+								class="fas fa-play"></span><span class="tab-text">ER Concatenadas</span></a></li>
 				</ul>
 				<ul class="buttonsRegresar">
-					<li><a onclick="document.getElementById('clicsRegresar').play()" href="#buttonT1"><span class="fas fa-undo"></span><span class="tab-text">Regresar</span></a></li>
+					<li><a onclick="document.getElementById('clicsRegresar').play()" href="#buttonT1"><span
+								class="fas fa-undo"></span><span class="tab-text">Regresar</span></a></li>
 				</ul>
 			</article>
 
@@ -407,46 +462,67 @@
 					puede representar con λ o Ɛ.
 				</p>
 				<ul class="buttonsAnimaciones">
-					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir5"><span class="fas fa-play"></span><span class="tab-text">Cierre de Estrella</span></a></li>
+					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir5"><span
+								class="fas fa-play"></span><span class="tab-text">Cierre de Estrella</span></a></li>
 				</ul>
 				<ul class="buttonsRegresar">
-					<li><a onclick="document.getElementById('clicsRegresar').play()" href="#buttonT1"><span class="fas fa-undo"></span><span class="tab-text">Regresar</span></a></li>
+					<li><a onclick="document.getElementById('clicsRegresar').play()" href="#buttonT1"><span
+								class="fas fa-undo"></span><span class="tab-text">Regresar</span></a></li>
 				</ul>
 			</article>
 
 			<article id="ejemplosER">
 				<h1>Animaciones ER</h1>
-				<p>Con estos ejercicios de ejemplo a través de animaciones podrás comprender mejor lo visto en la sección de <b>Teoría</b></p>
+				<p>Con estos ejercicios de ejemplo a través de animaciones podrás comprender mejor lo visto en la
+					sección de <b>Teoría</b></p>
 				<br>
 				<ul class="buttonsAnimaciones">
-					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir10"><span class="fas fa-play"></span><span class="tab-text">Ejemplo 1</span></a></li>
-					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir11"><span class="fas fa-play"></span><span class="tab-text">Ejemplo 2</span></a></li>
+					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir10"><span
+								class="fas fa-play"></span><span class="tab-text">Ejemplo 1</span></a></li>
+					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir11"><span
+								class="fas fa-play"></span><span class="tab-text">Ejemplo 2</span></a></li>
 				</ul>
 				<br>
 				<ul class="buttonsAnimaciones">
-					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir12"><span class="fas fa-play"></span><span class="tab-text">Ejemplo 3</span></a></li>
-					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir13"><span class="fas fa-play"></span><span class="tab-text">Ejemplo 4</span></a></li>
+					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir12"><span
+								class="fas fa-play"></span><span class="tab-text">Ejemplo 3</span></a></li>
+					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir13"><span
+								class="fas fa-play"></span><span class="tab-text">Ejemplo 4</span></a></li>
 				</ul>
 				<br>
 				<ul class="buttonsRegresar">
-					<li><a onclick="document.getElementById('clicsRegresar').play()" href="#button2"><span class="fas fa-undo"></span><span class="tab-text">Regresar</span></a></li>
+					<li><a onclick="document.getElementById('clicsRegresar').play()" href="#button2"><span
+								class="fas fa-undo"></span><span class="tab-text">Regresar</span></a></li>
 				</ul>
 			</article>
 
-			<!-- CONTENDEDORES DE ANIMACIONES------------------------------------------------------ -->	
+			<!-- CONTENDEDORES DE ANIMACIONES------------------------------------------------------ -->
 
 			<!-- INICIA SECCIONES DE ANIMACIONES DE OPERACIONES - UNION-------------------------------------- -->
 
 			<div id="modalUnion1" class="modal">
 				<div class="flex" id="flex1">
 					<div class="contenido-modal">
-						<center><div class="modal-header flex">
-							<h2>Expresiones Regulares - Unión</h2>
-							<span class="close" id="close1">&times;</span>
-						</div></center>
+						<center>
+							<div class="modal-header flex">
+								<h2>Expresiones Regulares - Unión</h2>
+								<span class="close" id="close1">&times;</span>
+							</div>
+						</center>
 						<div class="modal-body">
+							<canvas class="animation" id="dosCaminosc" width="800px" height="400px"></canvas>
+							<br>
+							<label for="dosCaminosv">Velocidad de animacion</label>
+							<input id="dosCaminosv" type="range" min="1000" max="4000" step="100">
+
+							<h3 id="out-dosCaminosv">2500</h3>
+
+							<center><button id="boton-dosCaminos">Pausa</button></center>
+
+							<!--
 							<img id="rotator1" src="img/animacionUnion1.gif">	
 							<center><input class="botonReinicio" value="Reiniciar Animación" type="button" onclick="unfreeze_gif('rotator1', 'img/animacionUnion1.gif')" /></center>
+							-->
 						</div>
 						<div class="footer">
 							<h3>Derechos Reservados &copy;</h3>
@@ -463,8 +539,15 @@
 							<span class="close" id="close2">&times;</span>
 						</div>
 						<div class="modal-body">
-							<img id="rotator2" src="img/animacionUnion2.gif">
-							<center><input class="botonReinicio" value="Reiniciar Animación" type="button" onclick="unfreeze_gif('rotator2', 'img/animacionUnion2.gif')"/></center>
+							<canvas id="dosExpresionesConUnionc" width="800px" height="400px"></canvas>
+							<br>
+							<label for="dosExpresionesConUnionv">Velocidad de animacion</label>
+							<input id="dosExpresionesConUnionv" type="range" min="1000" max="4000" step="100">
+
+							<h3 id="out-dosExpresionesConUnionv">2500</h3>
+
+							<center><button id="boton-dosExpresionesConUnion">Pausa</button></center>
+
 						</div>
 						<div class="footer">
 							<h3>Derechos Reservados &copy;</h3>
@@ -481,8 +564,19 @@
 							<span class="close" id="close3">&times;</span>
 						</div>
 						<div class="modal-body">
+							<!--
 							<img id="rotator3" src="img/animacionUnion3.gif">
-							<center><input class="botonReinicio" value="Reiniciar Animación" type="button" onclick="unfreeze_gif('rotator3', 'img/animacionUnion3.gif')"/></center>		
+							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
+									onclick="unfreeze_gif('rotator3', 'img/animacionUnion3.gif')" /></center>
+							-->
+							<canvas id="dosExpresionesSinUnionc" width="800px" height="400px"></canvas>
+							<br>
+							<label for="dosExpresionesSinUnionv">Velocidad de animacion</label>
+							<input id="dosExpresionesSinUnionv" type="range" min="1000" max="4000" step="100">
+
+							<h3 id="out-dosExpresionesSinUnionv">2500</h3>
+
+							<center><button id="boton-dosExpresionesSinUnion" class="interact-btn">Pausa</button></center>
 						</div>
 						<div class="footer">
 							<h3>Derechos Reservados &copy;</h3>
@@ -501,8 +595,23 @@
 							<span class="close" id="close4">&times;</span>
 						</div>
 						<div class="modal-body">
+							<!--
 							<img id="rotator4" src="img/animacionConcatenacion.gif">
-							<center><input class="botonReinicio" value="Reiniciar Animación" type="button" onclick="unfreeze_gif('rotator4', 'img/animacionConcatenacion.gif')"/></center>		
+							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
+									onclick="unfreeze_gif('rotator4', 'img/animacionConcatenacion.gif')" /></center>
+							-->
+							<canvas id="expresionesConcatenadasc" width="800px" height="400px"></canvas>
+							<br>
+							<label for="expresionesConcatenadasv">Velocidad de animacion</label>
+							<input id="expresionesConcatenadasv" type="range" min="1000" max="4000" step="100">
+
+							<h3 id="out-expresionesConcatenadasv">2500</h3>
+
+							<center>
+								<button id="boton-expresionesConcatenadas" class="interact-btn">Pausa</button>
+								<button id="boton-toFront" class="interact-btn">Adelantar</button>
+								<button id="boton-toBack" class="interact-btn">Retrasar</button>
+							</center>
 						</div>
 						<div class="footer">
 							<h3>Derechos Reservados &copy;</h3>
@@ -521,8 +630,19 @@
 							<span class="close" id="close5">&times;</span>
 						</div>
 						<div class="modal-body">
+							<!--
 							<img id="rotator5" src="img/animacionCierreEstrella.gif">
-							<center><input class="botonReinicio" value="Reiniciar Animación" type="button" onclick="unfreeze_gif('rotator5', 'img/animacionCierreEstrella.gif')"/></center>			
+							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
+									onclick="unfreeze_gif('rotator5', 'img/animacionCierreEstrella.gif')" /></center>
+							-->
+							<canvas id="cierreDeEstrellac" width="800px" height="400px"></canvas>
+							<br>
+							<label for="cierreDeEstrellav">Velocidad de animacion</label>
+							<input id="cierreDeEstrellav" type="range" min="1000" max="4000" step="100">
+
+							<h3 id="out-cierreDeEstrellav">2500</h3>
+
+							<center><button id="boton-cierreDeEstrella">Pausa</button></center>
 						</div>
 						<div class="footer">
 							<h3>Derechos Reservados &copy;</h3>
@@ -542,8 +662,19 @@
 							<span class="close" id="close6">&times;</span>
 						</div>
 						<div class="modal-body">
+							<!--
 							<img id="rotator6" src="img/animacionPrecedencia.gif">
-							<center><input class="botonReinicio" value="Reiniciar Animación" type="button" onclick="unfreeze_gif('rotator6', 'img/animacionPrecedencia.gif')"/></center>		
+							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
+									onclick="unfreeze_gif('rotator6', 'img/animacionPrecedencia.gif')" /></center>
+							-->
+							<canvas id="precedenciaDeOperadoresc" width="800px" height="400px"></canvas>
+							<br>
+							<label for="precedenciaDeOperadoresv">Velocidad de animacion</label>
+							<input id="precedenciaDeOperadoresv" type="range" min="1000" max="4000" step="100">
+
+							<h3 id="out-precedenciaDeOperadoresv">2500</h3>
+
+							<center><button id="boton-precedenciaDeOperadores">Pausa</button></center>
 						</div>
 						<div class="footer">
 							<h3>Derechos Reservados &copy;</h3>
@@ -563,8 +694,19 @@
 							<span class="close" id="close7">&times;</span>
 						</div>
 						<div class="modal-body">
+							<!--Integrar en esta sección parte por parte el canvas
 							<img id="rotator7" src="img/animacionCompletez1.gif">
-							<center><input class="botonReinicio" value="Reiniciar Animación" type="button" onclick="unfreeze_gif('rotator7', 'img/animacionCompletez1.gif')"/></center>			
+							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
+									onclick="unfreeze_gif('rotator7', 'img/animacionCompletez1.gif')" /></center>
+							-->
+							<canvas id="completez1c" width="800px" height="400px"></canvas>
+							<br>
+							<label for="completez1v">Velocidad de animacion</label>
+							<input id="completez1v" type="range" min="1000" max="4000" step="100">
+
+							<h3 id="out-completez1v">2500</h3>
+
+							<center><button id="boton-completez1">Pausa</button></center>
 						</div>
 						<div class="footer">
 							<h3>Derechos Reservados &copy;</h3>
@@ -581,8 +723,20 @@
 							<span class="close" id="close8">&times;</span>
 						</div>
 						<div class="modal-body">
+							<!--
 							<img id="rotator8" src="img/animacionCompletez2.gif">
-							<center><input class="botonReinicio" value="Reiniciar Animación" type="button" onclick="unfreeze_gif('rotator8', 'img/animacionCompletez2.gif')"/></center>			
+							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
+									onclick="unfreeze_gif('rotator8', 'img/animacionCompletez2.gif')" /></center>
+							-->
+
+							<canvas id="completez2c" width="800px" height="400px"></canvas>
+							<br>
+							<label for="completez2v">Velocidad de animacion</label>
+							<input id="completez2v" type="range" min="1000" max="4000" step="100">
+
+							<h3 id="out-completez2v">2500</h3>
+
+							<center><button id="boton-completez2">Pausa</button></center>
 						</div>
 						<div class="footer">
 							<h3>Derechos Reservados &copy;</h3>
@@ -599,9 +753,21 @@
 							<span class="close" id="close9">&times;</span>
 						</div>
 						<div class="modal-body">
+							<!--
 							<img id="rotator9" src="img/animacionCorreccion.gif">
-							<center><input class="botonReinicio" value="Reiniciar Animación" type="button" onclick="unfreeze_gif('rotator9', 'img/animacionCorreccion.gif')"/></center>			
+							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
+									onclick="unfreeze_gif('rotator9', 'img/animacionCorreccion.gif')" /></center>
+							-->
+							<canvas id="correccionc" width="800px" height="400px"></canvas>
+							<br>
+							<label for="correccionv">Velocidad de animacion</label>
+							<input id="correccionv" type="range" min="1000" max="4000" step="100">
+
+							<h3 id="out-correccionv">2500</h3>
+
+							<center><button id="boton-correccion">Pausa</button></center>
 						</div>
+
 						<div class="footer">
 							<h3>Derechos Reservados &copy;</h3>
 						</div>
@@ -617,8 +783,19 @@
 							<span class="close" id="close10">&times;</span>
 						</div>
 						<div class="modal-body">
-							<img  id="rotator10" src="img/ejemplo1.gif">
-							<center><input class="botonReinicio" value="Reiniciar Animación" type="button" onclick="unfreeze_gif('rotator10', 'img/ejemplo1.gif')"/></center>		
+							<!--
+							<img id="rotator10" src="img/ejemplo1.gif">
+							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
+									onclick="unfreeze_gif('rotator10', 'img/ejemplo1.gif')" /></center>
+							-->
+							<canvas id="ejemplo1c" width="800px" height="400px"></canvas>
+							<br>
+							<label for="ejemplo1v">Velocidad de animacion</label>
+							<input id="ejemplo1v" type="range" min="1000" max="4000" step="100">
+
+							<h3 id="out-ejemplo1v">2500</h3>
+
+							<center><button id="boton-ejemplo1">Pausa</button></center>
 						</div>
 						<div class="footer">
 							<h3>Derechos Reservados &copy;</h3>
@@ -635,8 +812,19 @@
 							<span class="close" id="close11">&times;</span>
 						</div>
 						<div class="modal-body">
+							<!--
 							<img id="rotator11" src="img/ejemplo2.gif">
-							<center><input class="botonReinicio" value="Reiniciar Animación" type="button" onclick="unfreeze_gif('rotator11', 'img/ejemplo2.gif')"/></center>		
+							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
+									onclick="unfreeze_gif('rotator11', 'img/ejemplo2.gif')" /></center>
+							-->
+							<canvas id="ejemplo2c" width="800px" height="400px"></canvas>
+							<br>
+							<label for="ejemplo2v">Velocidad de animacion</label>
+							<input id="ejemplo2v" type="range" min="1000" max="4000" step="100">
+
+							<h3 id="out-ejemplo2v">2500</h3>
+
+							<center><button id="boton-ejemplo2">Pausa</button></center>
 						</div>
 						<div class="footer">
 							<h3>Derechos Reservados &copy;</h3>
@@ -653,8 +841,19 @@
 							<span class="close" id="close12">&times;</span>
 						</div>
 						<div class="modal-body">
+							<!--
 							<img id="rotator12" src="img/ejemplo3.gif">
-							<center><input class="botonReinicio" value="Reiniciar Animación" type="button" onclick="unfreeze_gif('rotator12', 'img/ejemplo3.gif')"/></center>		
+							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
+									onclick="unfreeze_gif('rotator12', 'img/ejemplo3.gif')" /></center>
+							-->
+							<canvas id="ejemplo3c" width="800px" height="400px"></canvas>
+							<br>
+							<label for="ejemplo3v">Velocidad de animacion</label>
+							<input id="ejemplo3v" type="range" min="1000" max="4000" step="100">
+
+							<h3 id="out-ejemplo3v">2500</h3>
+
+							<center><button id="boton-ejemplo3">Pausa</button></center>
 						</div>
 						<div class="footer">
 							<h3>Derechos Reservados &copy;</h3>
@@ -671,8 +870,19 @@
 							<span class="close" id="close13">&times;</span>
 						</div>
 						<div class="modal-body">
+							<!--
 							<img id="rotator13" src="img/ejemplo4.gif">
-							<center><input class="botonReinicio" value="Reiniciar Animación" type="button" onclick="unfreeze_gif('rotator13', 'img/ejemplo4.gif')"/></center>		
+							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
+									onclick="unfreeze_gif('rotator13', 'img/ejemplo4.gif')" /></center>
+							-->
+							<canvas id="ejemplo4c" width="800px" height="400px"></canvas>
+							<br>
+							<label for="ejemplo4v">Velocidad de animacion</label>
+							<input id="ejemplo4v" type="range" min="1000" max="4000" step="100">
+
+							<h3 id="out-ejemplo4v">2500</h3>
+
+							<center><button id="boton-ejemplo4">Pausa</button></center>
 						</div>
 						<div class="footer">
 							<h3>Derechos Reservados &copy;</h3>
@@ -690,93 +900,94 @@
 				<h1>S= {a,b}</h1>
 
 				<ul class="buttonGALF">
-					<li><a onclick="document.getElementById('clicsMenu').play();ocultarABC1();ocultarABC2();ocultarABC3();ocultarABC4();mostrarABC();" href="#alfabeto1"><span class="tab-text">Generar Alfabeto</span></a></li>
+					<li><a onclick="document.getElementById('clicsMenu').play();ocultarABC1();ocultarABC2();ocultarABC3();ocultarABC4();mostrarABC();"
+							href="#alfabeto1"><span class="tab-text">Generar Alfabeto</span></a></li>
 				</ul>
 
 				<div id="palabrasAceptadasAB" style="display: block">
 					<ul class="buttonMostrarER">
 						<li><a onclick="ocultarAB();mostrarAB1();"><span class="tab-text">Generar ER</span></a></li>
-					</ul>	
-					<h5>------------------------ ER = a*b*  ------------------------</h5>
+					</ul>
+					<h5>------------------------ ER = a*b* ------------------------</h5>
 					<table class="content-table">
-					  <thead>
-					    <tr>
-					      <th>Aceptadas</th>
-					      <th>Rechazadas</th>
-					    </tr>
-					  </thead>
-					  <tbody>
-					    <tr>
-					      <td><b>a</b></td>
-					      <td><b>ba</b></td>
-					    </tr>
-					    <tr class="active-row">
-					      <td><b>aaaa</b></td>
-					      <td><b>aaba</b></td>
-					    </tr>
-					    <tr>
-					      <td><b>aabb</b></td>
-					      <td><b>bbba</b></td>
-					    </tr>
-					  </tbody>
+						<thead>
+							<tr>
+								<th>Aceptadas</th>
+								<th>Rechazadas</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><b>a</b></td>
+								<td><b>ba</b></td>
+							</tr>
+							<tr class="active-row">
+								<td><b>aaaa</b></td>
+								<td><b>aaba</b></td>
+							</tr>
+							<tr>
+								<td><b>aabb</b></td>
+								<td><b>bbba</b></td>
+							</tr>
+						</tbody>
 					</table>
 				</div>
-				
+
 				<div id="palabrasAceptadasAB1" style="display: none">
 					<ul class="buttonMostrarER">
 						<li><a onclick="ocultarAB1();mostrarAB2();"><span class="tab-text">Generar ER</span></a></li>
-					</ul>	
+					</ul>
 					<h5>------------------------ ER = a*b*(ab) ------------------------</h5>
 					<table class="content-table">
-					  <thead>
-					    <tr>
-					      <th>Aceptadas</th>
-					      <th>Rechazadas</th>
-					    </tr>
-					  </thead>
-					  <tbody>
-					    <tr>
-					      <td><b>ab</b></td>
-					      <td><b>ba</b></td>
-					    </tr>
-					    <tr class="active-row">
-					      <td><b>aaaab</b></td>
-					      <td><b>ababa</b></td>
-					    </tr>
-					    <tr>
-					      <td><b>aabbab</b></td>
-					      <td><b>abbbba</b></td>
-					    </tr>
-					  </tbody>
+						<thead>
+							<tr>
+								<th>Aceptadas</th>
+								<th>Rechazadas</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><b>ab</b></td>
+								<td><b>ba</b></td>
+							</tr>
+							<tr class="active-row">
+								<td><b>aaaab</b></td>
+								<td><b>ababa</b></td>
+							</tr>
+							<tr>
+								<td><b>aabbab</b></td>
+								<td><b>abbbba</b></td>
+							</tr>
+						</tbody>
 					</table>
 				</div>
 
 				<div id="palabrasAceptadasAB2" style="display: none">
 					<ul class="buttonMostrarER">
 						<li><a onclick="ocultarAB2();mostrarAB3();"><span class="tab-text">Generar ER</span></a></li>
-					</ul>	
-					<h5>------------------------ ER = (ba + ab)*a  ------------------------</h5>
+					</ul>
+					<h5>------------------------ ER = (ba + ab)*a ------------------------</h5>
 					<table class="content-table">
-					  <thead>
-					    <tr>
-					      <th>Aceptadas</th>
-					      <th>Rechazadas</th>
-					    </tr>
-					  </thead>
-					  <tbody>
-					    <tr>
-					      <td><b>a</b></td>
-					      <td><b>baaa</b></td>
-					    </tr>
-					    <tr class="active-row">
-					      <td><b>baba</b></td>
-					      <td><b>aaaba</b></td>
-					    </tr>
-					    <tr>
-					      <td><b>ababa</b></td>
-					      <td><b>abaab</b></td>
-					    </tr>
-					  </tbody>
+						<thead>
+							<tr>
+								<th>Aceptadas</th>
+								<th>Rechazadas</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><b>a</b></td>
+								<td><b>baaa</b></td>
+							</tr>
+							<tr class="active-row">
+								<td><b>baaba</b></td>
+								<td><b>aaaba</b></td>
+							</tr>
+							<tr>
+								<td><b>ababa</b></td>
+								<td><b>abaab</b></td>
+							</tr>
+						</tbody>
 					</table>
 				</div>
 
@@ -786,27 +997,27 @@
 					</ul>
 					<h5>------------------------ ER = a*(b+a)* ------------------------</h5>
 					<table class="content-table">
-					  <thead>
-					    <tr>
-					      <th>Aceptadas</th>
-					      <th>Rechazadas</th>
-					    </tr>
-					  </thead>
-					  <tbody>
-					    <tr>
-					      <td><b>Ɛ</b></td>
-					      <td><b>ba</b></td>
-					    </tr>
-					    <tr class="active-row">
-					      <td><b>aaaa</b></td>
-					      <td><b>bbbba</b></td>
-					    </tr>
-					    <tr>
-					      <td><b>abbbbb</b></td>
-					      <td><b>aaaba</b></td>
-					    </tr>
-					  </tbody>
-					</table>			
+						<thead>
+							<tr>
+								<th>Aceptadas</th>
+								<th>Rechazadas</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><b>Ɛ</b></td>
+								<td><b>ba</b></td>
+							</tr>
+							<tr class="active-row">
+								<td><b>aaaa</b></td>
+								<td><b>bbbba</b></td>
+							</tr>
+							<tr>
+								<td><b>abbbbb</b></td>
+								<td><b>aaaba</b></td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 
 				<div id="palabrasAceptadasAB4" style="display: none">
@@ -815,27 +1026,27 @@
 					</ul>
 					<h5>------------------------ ER = (a+b)aab* ------------------------</h5>
 					<table class="content-table">
-					  <thead>
-					    <tr>
-					      <th>Aceptadas</th>
-					      <th>Rechazadas</th>
-					    </tr>
-					  </thead>
-					  <tbody>
-					    <tr>
-					      <td><b>baa</b></td>
-					      <td><b>aa</b></td>
-					    </tr>
-					    <tr class="active-row">
-					      <td><b>aaa</b></td>
-					      <td><b>aaaab</b></td>
-					    </tr>
-					    <tr>
-					      <td><b>aaabbbb</b></td>
-					      <td><b>abbbb</b></td>
-					    </tr>
-					  </tbody>
-					</table>			
+						<thead>
+							<tr>
+								<th>Aceptadas</th>
+								<th>Rechazadas</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><b>baa</b></td>
+								<td><b>aa</b></td>
+							</tr>
+							<tr class="active-row">
+								<td><b>aaa</b></td>
+								<td><b>aaaab</b></td>
+							</tr>
+							<tr>
+								<td><b>aaabbbb</b></td>
+								<td><b>abbbb</b></td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</article>
 
@@ -845,93 +1056,94 @@
 				<h1>S= {a,b,c}</h1>
 
 				<ul class="buttonGALF">
-					<li><a onclick="document.getElementById('clicsMenu').play();ocultarABCD1();ocultarABCD2();ocultarABCD3();ocultarABCD4();mostrarABCD();" href="#alfabeto2"><span class="tab-text">Generar Alfabeto</span></a></li>
+					<li><a onclick="document.getElementById('clicsMenu').play();ocultarABCD1();ocultarABCD2();ocultarABCD3();ocultarABCD4();mostrarABCD();"
+							href="#alfabeto2"><span class="tab-text">Generar Alfabeto</span></a></li>
 				</ul>
 
 				<div id="palabrasAceptadasABC" style="display: block">
 					<ul class="buttonMostrarER">
 						<li><a onclick="ocultarABC();mostrarABC1();"><span class="tab-text">Generar ER</span></a></li>
-					</ul>	
+					</ul>
 					<h5>---------------------- ER = (a+b)b*a+c* ----------------------</h5>
 					<table class="content-table">
-					  <thead>
-					    <tr>
-					      <th>Aceptadas</th>
-					      <th>Rechazadas</th>
-					    </tr>
-					  </thead>
-					  <tbody>
-					    <tr>
-					      <td><b>aa</b></td>
-					      <td><b>bcc</b></td>
-					    </tr>
-					    <tr class="active-row">
-					      <td><b>bbba</b></td>
-					      <td><b>abc</b></td>
-					    </tr>
-					    <tr>
-					      <td><b>abbbbbacc</b></td>
-					      <td><b>acccc</b></td>
-					    </tr>
-					  </tbody>
+						<thead>
+							<tr>
+								<th>Aceptadas</th>
+								<th>Rechazadas</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><b>aa</b></td>
+								<td><b>bcc</b></td>
+							</tr>
+							<tr class="active-row">
+								<td><b>bbba</b></td>
+								<td><b>abc</b></td>
+							</tr>
+							<tr>
+								<td><b>abbbbbacc</b></td>
+								<td><b>acccc</b></td>
+							</tr>
+						</tbody>
 					</table>
 				</div>
-				
+
 				<div id="palabrasAceptadasABC1" style="display: none">
 					<ul class="buttonMostrarER">
 						<li><a onclick="ocultarABC1();mostrarABC2();"><span class="tab-text">Generar ER</span></a></li>
-					</ul>	
+					</ul>
 					<h5>------------------------ ER = (a+b)b*(b+c)c ------------------------</h5>
 					<table class="content-table">
-					  <thead>
-					    <tr>
-					      <th>Aceptadas</th>
-					      <th>Rechazadas</th>
-					    </tr>
-					  </thead>
-					  <tbody>
-					    <tr>
-					      <td><b>abc</b></td>
-					      <td><b>abbbac</b></td>
-					    </tr>
-					    <tr class="active-row">
-					      <td><b>abbbcc</b></td>
-					      <td><b>aabbcc</b></td>
-					    </tr>
-					    <tr>
-					      <td><b>bbbbbc</b></td>
-					      <td><b>aaaacccbbb</b></td>
-					    </tr>
-					  </tbody>
+						<thead>
+							<tr>
+								<th>Aceptadas</th>
+								<th>Rechazadas</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><b onclick="">abc</b></td>
+								<td><b>abbbac</b></td>
+							</tr>
+							<tr class="active-row">
+								<td><b>abbbcc</b></td>
+								<td><b>aabbcc</b></td>
+							</tr>
+							<tr>
+								<td><b>bbbbbc</b></td>
+								<td><b>aaaacccbbb</b></td>
+							</tr>
+						</tbody>
 					</table>
 				</div>
 
 				<div id="palabrasAceptadasABC2" style="display: none">
 					<ul class="buttonMostrarER">
 						<li><a onclick="ocultarABC2();mostrarABC3();"><span class="tab-text">Generar ER</span></a></li>
-					</ul>	
+					</ul>
 					<h5>------------------------ ER = ab*c ------------------------</h5>
 					<table class="content-table">
-					  <thead>
-					    <tr>
-					      <th>Aceptadas</th>
-					      <th>Rechazadas</th>
-					    </tr>
-					  </thead>
-					  <tbody>
-					    <tr>
-					      <td><b>ac</b></td>
-					      <td><b>baaac</b></td>
-					    </tr>
-					    <tr class="active-row">
-					      <td><b>abc</b></td>
-					      <td><b>caaab</b></td>
-					    </tr>
-					    <tr>
-					      <td><b>abbbbbc</b></td>
-					      <td><b>bcaa</b></td>
-					    </tr>
-					  </tbody>
+						<thead>
+							<tr>
+								<th>Aceptadas</th>
+								<th>Rechazadas</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><b>ac</b></td>
+								<td><b>baaac</b></td>
+							</tr>
+							<tr class="active-row">
+								<td><b>abc</b></td>
+								<td><b>caaab</b></td>
+							</tr>
+							<tr>
+								<td><b>abbbbbc</b></td>
+								<td><b>bcaa</b></td>
+							</tr>
+						</tbody>
 					</table>
 				</div>
 
@@ -941,27 +1153,27 @@
 					</ul>
 					<h5>------------------------ ER = (aa)*b(ab)c* ------------------------</h5>
 					<table class="content-table">
-					  <thead>
-					    <tr>
-					      <th>Aceptadas</th>
-					      <th>Rechazadas</th>
-					    </tr>
-					  </thead>
-					  <tbody>
-					    <tr>
-					      <td><b>bab</b></td>
-					      <td><b>baac</b></td>
-					    </tr>
-					    <tr class="active-row">
-					      <td><b>aaab</b></td>
-					      <td><b>aaababc</b></td>
-					    </tr>
-					    <tr>
-					      <td><b>babcccc</b></td>
-					      <td><b>aaaaab</b></td>
-					    </tr>
-					  </tbody>
-					</table>			
+						<thead>
+							<tr>
+								<th>Aceptadas</th>
+								<th>Rechazadas</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><b>bab</b></td>
+								<td><b>baac</b></td>
+							</tr>
+							<tr class="active-row">
+								<td><b>aaab</b></td>
+								<td><b>aaababc</b></td>
+							</tr>
+							<tr>
+								<td><b>babcccc</b></td>
+								<td><b>aaaaab</b></td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 
 				<div id="palabrasAceptadasABC4" style="display: none">
@@ -970,27 +1182,27 @@
 					</ul>
 					<h5>------------------------ ER = a*(a+b)c* ------------------------</h5>
 					<table class="content-table">
-					  <thead>
-					    <tr>
-					      <th>Aceptadas</th>
-					      <th>Rechazadas</th>
-					    </tr>
-					  </thead>
-					  <tbody>
-					    <tr>
-					      <td><b>a</b></td>
-					      <td><b>bca</b></td>
-					    </tr>
-					    <tr class="active-row">
-					      <td><b>b</b></td>
-					      <td><b>aaacb</b></td>
-					    </tr>
-					    <tr>
-					      <td><b>aaaac</b></td>
-					      <td><b>aabbcc</b></td>
-					    </tr>
-					  </tbody>
-					</table>			
+						<thead>
+							<tr>
+								<th>Aceptadas</th>
+								<th>Rechazadas</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><b>a</b></td>
+								<td><b>bca</b></td>
+							</tr>
+							<tr class="active-row">
+								<td><b>b</b></td>
+								<td><b>aaacb</b></td>
+							</tr>
+							<tr>
+								<td><b>aaaac</b></td>
+								<td><b>aabbcc</b></td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</article>
 
@@ -999,123 +1211,127 @@
 				<h1>S= {a,b,c,d}</h1>
 
 				<ul class="buttonGALF ">
-					<li><a onclick="document.getElementById('clicsMenu').play();ocultarAB1();ocultarAB2();ocultarAB3();ocultarAB4();mostrarAB();" href="#alfabeto0"><span class="tab-text">Generar Alfabeto</span></a></li>
+					<li><a onclick="document.getElementById('clicsMenu').play();ocultarAB1();ocultarAB2();ocultarAB3();ocultarAB4();mostrarAB();"
+							href="#alfabeto0"><span class="tab-text">Generar Alfabeto</span></a></li>
 				</ul>
 
 				<div id="palabrasAceptadasABCD" style="display: block">
 					<ul class="buttonMostrarER">
 						<li><a onclick="ocultarABCD();mostrarABCD1();"><span class="tab-text">Generar ER</span></a></li>
-					</ul>	
+					</ul>
 					<h5>------------------- ER = (ab)*(c+d)d* -------------------</h5>
 					<table class="content-table">
-					  <thead>
-					    <tr>
-					      <th>Aceptadas</th>
-					      <th>Rechazadas</th>
-					    </tr>
-					  </thead>
-					  <tbody>
-					    <tr>
-					      <td><b>c</b></td>
-					      <td><b>bacd</b></td>
-					    </tr>
-					    <tr class="active-row">
-					      <td><b>abcd</b></td>
-					      <td><b>abccd</b></td>
-					    </tr>
-					    <tr>
-					      <td><b>ababdddd</b></td>
-					      <td><b>acccddd</b></td>
-					    </tr>
-					  </tbody>
+						<thead>
+							<tr>
+								<th>Aceptadas</th>
+								<th>Rechazadas</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><b>c</b></td>
+								<td><b>bacd</b></td>
+							</tr>
+							<tr class="active-row">
+								<td><b>abcd</b></td>
+								<td><b>abccd</b></td>
+							</tr>
+							<tr>
+								<td><b>ababdddd</b></td>
+								<td><b>acccddd</b></td>
+							</tr>
+						</tbody>
 					</table>
 				</div>
-				
+
 				<div id="palabrasAceptadasABCD1" style="display: none">
 					<ul class="buttonMostrarER">
-						<li><a onclick="ocultarABCD1();mostrarABCD2();"><span class="tab-text">Generar ER</span></a></li>
-					</ul>	
+						<li><a onclick="ocultarABCD1();mostrarABCD2();"><span class="tab-text">Generar ER</span></a>
+						</li>
+					</ul>
 					<h5>------------------------ ER = a*b(b+c)d* ------------------------</h5>
 					<table class="content-table">
-					  <thead>
-					    <tr>
-					      <th>Aceptadas</th>
-					      <th>Rechazadas</th>
-					    </tr>
-					  </thead>
-					  <tbody>
-					    <tr>
-					      <td><b>bc</b></td>
-					      <td><b>bbbc</b></td>
-					    </tr>
-					    <tr class="active-row">
-					      <td><b>bbd</b></td>
-					      <td><b>abbbd</b></td>
-					    </tr>
-					    <tr>
-					      <td><b>aaabcddd</b></td>
-					      <td><b>cddddd</b></td>
-					    </tr>
-					  </tbody>
+						<thead>
+							<tr>
+								<th>Aceptadas</th>
+								<th>Rechazadas</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><b>bc</b></td>
+								<td><b>bbbc</b></td>
+							</tr>
+							<tr class="active-row">
+								<td><b>bbd</b></td>
+								<td><b>abbbd</b></td>
+							</tr>
+							<tr>
+								<td><b>aaabcddd</b></td>
+								<td><b>cddddd</b></td>
+							</tr>
+						</tbody>
 					</table>
 				</div>
 
 				<div id="palabrasAceptadasABCD2" style="display: none">
 					<ul class="buttonMostrarER">
-						<li><a onclick="ocultarABCD2();mostrarABCD3();"><span class="tab-text">Generar ER</span></a></li>
-					</ul>	
+						<li><a onclick="ocultarABCD2();mostrarABCD3();"><span class="tab-text">Generar ER</span></a>
+						</li>
+					</ul>
 					<h5>------------------------ ER = ab*cd* ------------------------</h5>
 					<table class="content-table">
-					  <thead>
-					    <tr>
-					      <th>Aceptadas</th>
-					      <th>Rechazadas</th>
-					    </tr>
-					  </thead>
-					  <tbody>
-					    <tr>
-					      <td><b>ac</b></td>
-					      <td><b>bcd</b></td>
-					    </tr>
-					    <tr class="active-row">
-					      <td><b>abc</b></td>
-					      <td><b>aabccd</b></td>
-					    </tr>
-					    <tr>
-					      <td><b>acddd</b></td>
-					      <td><b>abddd/b></td>
-					    </tr>
-					  </tbody>
+						<thead>
+							<tr>
+								<th>Aceptadas</th>
+								<th>Rechazadas</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><b>ac</b></td>
+								<td><b>bcd</b></td>
+							</tr>
+							<tr class="active-row">
+								<td><b>abc</b></td>
+								<td><b>aabccd</b></td>
+							</tr>
+							<tr>
+								<td><b>acddd</b></td>
+								<td><b>abddd</b></td>
+							</tr>
+						</tbody>
 					</table>
 				</div>
 
 				<div id="palabrasAceptadasABCD3" style="display: none">
 					<ul class="buttonMostrarER">
-						<li><a onclick="ocultarABCD3();mostrarABCD4();"><span class="tab-text">Generar ER</span></a></li>
+						<li><a onclick="ocultarABCD3();mostrarABCD4();"><span class="tab-text">Generar ER</span></a>
+						</li>
 					</ul>
 					<h5>------------------------ ER = (a+b)c*(cd) ------------------------</h5>
 					<table class="content-table">
-					  <thead>
-					    <tr>
-					      <th>Aceptadas</th>
-					      <th>Rechazadas</th>
-					    </tr>
-					  </thead>
-					  <tbody>
-					    <tr>
-					      <td><b>acd</b></td>
-					      <td><b>ccccd</b></td>
-					    </tr>
-					    <tr class="active-row">
-					      <td><b>bcccd</b></td>
-					      <td><b>accdc</b></td>
-					    </tr>
-					    <tr>
-					      <td><b>accccd</b></td>
-					      <td><b>cd</b></td>
-					    </tr>
-					  </tbody>
-					</table>			
+						<thead>
+							<tr>
+								<th>Aceptadas</th>
+								<th>Rechazadas</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><b>acd</b></td>
+								<td><b>ccccd</b></td>
+							</tr>
+							<tr class="active-row">
+								<td><b>bcccd</b></td>
+								<td><b>accdc</b></td>
+							</tr>
+							<tr>
+								<td><b>accccd</b></td>
+								<td><b>cd</b></td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 
 				<div id="palabrasAceptadasABCD4" style="display: none">
@@ -1124,36 +1340,37 @@
 					</ul>
 					<h5>------------------------ ER = a*bcd* ------------------------</h5>
 					<table class="content-table">
-					  <thead>
-					    <tr>
-					      <th>Aceptadas</th>
-					      <th>Rechazadas</th>
-					    </tr>
-					  </thead>
-					  <tbody>
-					    <tr>
-					      <td><b>bc</b></td>
-					      <td><b>aacb</b></td>
-					    </tr>
-					    <tr class="active-row">
-					      <td><b>abc</b></td>
-					      <td><b>cbddd</b></td>
-					    </tr>
-					    <tr>
-					      <td><b>bcddd</b></td>
-					      <td><b>abcccd</b></td>
-					    </tr>
-					  </tbody>
-					</table>			
-				</div>				
+						<thead>
+							<tr>
+								<th>Aceptadas</th>
+								<th>Rechazadas</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><b>bc</b></td>
+								<td><b>aacb</b></td>
+							</tr>
+							<tr class="active-row">
+								<td><b>abc</b></td>
+								<td><b>cbddd</b></td>
+							</tr>
+							<tr>
+								<td><b>bcddd</b></td>
+								<td><b>abcccd</b></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</article>
 
 		</div>
 	</div>
-		<script src="js/scriptModals.js"></script>
-		<script src="js/scriptControlGIF.js"></script>
-    	<script src="js/questions.js"></script>
-   		<script src="js/scriptQuestions.js"></script>
-   		<script src="js/scriptEvaluacion.js" async defer></script>
+	<script src="js/scriptModals.js"></script>
+	<script src="js/scriptControlGIF.js"></script>
+	<script src="js/questions.js"></script>
+	<script src="js/scriptQuestions.js"></script>
+	<script src="js/scriptEvaluacion.js" async defer></script>
 </body>
+
 </html>

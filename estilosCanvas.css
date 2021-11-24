@@ -1,0 +1,28 @@
+canvas {
+    padding: 0;
+    margin: auto;
+    display: block;
+    width: 800px;
+    height: 400px;
+}
+
+.interact-btn{
+    text-decoration: none;
+	font-size: 16px;
+	/*text-align: center;*/
+
+	transition: color, background-color, 0.5s;
+	color: white; 
+	background-color: #00102A;
+
+	display: inline;
+	padding: 10px 4px;
+}
+
+.interact-btn:hover{
+    color: black;
+    background-color: #C79316;
+    transition: all 600ms;
+    cursor:pointer;
+    box-shadow: 1px 1px 5px 0px white;
+}
