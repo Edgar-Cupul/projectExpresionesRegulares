@@ -121,7 +121,7 @@ function Animador(frames, direc, animacion, closer) {
                 alert("Ha habido un error de conteo. Recarga la página por favor.");
             }
 
-            diapositiva.src = direc + contadorDeFrames + ".png";
+            diapositiva.src = direc + contadorDeFrames + ".PNG";
             ctx.drawImage(diapositiva, 60, 0, 700, 393);
 
             contadorDeFrames += 1;
