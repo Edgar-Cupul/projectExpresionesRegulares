@@ -1,15 +1,21 @@
-canvas {
-    padding: 0;
-    margin: auto;
+/*----CANVAS----*/
+
+.animation {
+    width: 90%;
+    margin: 0 auto;
     display: block;
-    width: 800px;
-    height: 400px;
+    border: 1px solid #d9d9d9;
 }
+
+/*----BOTONES----*/
 
 .interact-btn{
     text-decoration: none;
 	font-size: 16px;
 	/*text-align: center;*/
+
+    border-style: none;
+    border-radius:15px;
 
 	transition: color, background-color, 0.5s;
 	color: white; 
@@ -25,4 +31,57 @@ canvas {
     transition: all 600ms;
     cursor:pointer;
     box-shadow: 1px 1px 5px 0px white;
+}
+
+
+
+.example-btn {
+    text-decoration: none;
+    margin: 1rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: bold;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #bbaa13;
+    border-radius: 6px;
+    border: none;
+    position: relative;
+}
+
+.example-btn:hover{
+    color: #f8fdff;
+    background-color: #040953;
+  }
+
+.exit-btn {
+    text-decoration: none;
+	font-size: 1em;
+	/*text-align: center;*/
+
+    border-style: none;
+    border-radius:15px;
+
+	transition: color, background-color, 0.5s;
+	color: white; 
+	background-color: #00102A;
+
+	display: block;
+    position: absolute;
+    left: 99%;
+    top: 90%;
+    transform: translate(-100%, -100%);
+
+	padding: 10px 4px;
+}
+
+.exit-btn:hover {
+    color: #000000;
+    background-color: #C79316;
+}
+
+/*----INPUTS----*/
+
+.velocidad-input {
+    width: 50%;
 }
