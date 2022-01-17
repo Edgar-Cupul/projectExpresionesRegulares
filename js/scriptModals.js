@@ -316,3 +316,4 @@ window.addEventListener('click', function(e){
 
 ///////////////////////////////////////////////////////
 /* ESTA SECCIÓN ES PARA MODIFICAR MODALES PARA ANIMAR*/
+

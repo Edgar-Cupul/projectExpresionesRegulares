@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="estilosCanvas.css">
 	<link rel="shortcut icon" href="img/iconBOTER.png" type="image/x-icon">
 
+
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="js/scriptMostrarArticles.js"></script>
 	<script src="js/scriptFuncionesGAlfabetos.js"></script>
@@ -512,14 +513,21 @@
 						<div class="modal-body">
 							<canvas class="animation" id="dosCaminosc" width="800px" height="400px"></canvas>
 							<br>
-							<label for="dosCaminosv">Velocidad de animacion</label>
-							<input id="dosCaminosv" type="range" min="1000" max="4000" step="100">
+							<label for="dosCaminosv">Velocidad de animación</label>
+							<input id="dosCaminosv" type="range" class="velocidad-input" min="1000" max="4000"
+								step="100">
 
 							<center>
-								<button id="boton-dosCaminos-toFront" class="interact-btn">Adelantar</button>
-								<button id="boton-dosCaminos" class="interact-btn">Pausa</button>
-								<button id="boton-dosCaminos-toBack" class="interact-btn">Retrasar</button>
+								<button id="boton-dosCaminos-toBack" class="interact-btn"><span
+										class="fas fa-backward"></span></button>
+								<button id="boton-dosCaminos" class="interact-btn">Pausar</button>
+								<button id="boton-dosCaminos-toFront" class="interact-btn"><span
+										class="fas fa-forward"></span></button>
+								<button id="boton-dosCaminos-repeat" class="interact-btn">Repetir</button>
 							</center>
+
+							<button class="exit-btn" id="boton-dosCaminos-exit"><span class="fas fa-undo"></span><span
+									class="tab-text">Regresar</span></button>
 
 							<!--
 							<img id="rotator1" src="img/animacionUnion1.gif">	
@@ -541,16 +549,20 @@
 							<span class="close" id="close2">&times;</span>
 						</div>
 						<div class="modal-body">
-							<canvas id="dosExpresionesConUnionc" width="800px" height="400px"></canvas>
+							<canvas id="dosExpresionesConUnionc" class="animation" width="800px"
+								height="400px"></canvas>
 							<br>
-							<label for="dosExpresionesConUnionv">Velocidad de animacion</label>
-							<input id="dosExpresionesConUnionv" type="range" min="1000" max="4000" step="100">
+							<label for="dosExpresionesConUnionv">Velocidad de animación</label>
+							<input id="dosExpresionesConUnionv" type="range" class="velocidad-input" min="1000" max="4000" step="100">
 
 							<center>
+								<button id="boton-dosExpresionesConUnion-toBack" class="interact-btn"><span
+									class="fas fa-backward"></span></button>
+								<button id="boton-dosExpresionesConUnion" class="interact-btn">Pausar</button>
 								<button id="boton-dosExpresionesConUnion-toFront"
-									class="interact-btn">Adelantar</button>
-								<button id="boton-dosExpresionesConUnion" class="interact-btn">Pausa</button>
-								<button id="boton-dosExpresionesConUnion-toBack" class="interact-btn">Retrasar</button>
+									class="interact-btn"><span
+									class="fas fa-forward"></span></button>
+								<button id="boton-dosExpresionesConUnion-repeat" class="interact-btn">Repetir</button>
 							</center>
 
 						</div>
@@ -574,16 +586,20 @@
 							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
 									onclick="unfreeze_gif('rotator3', 'img/animacionUnion3.gif')" /></center>
 							-->
-							<canvas id="dosExpresionesSinUnionc" width="800px" height="400px"></canvas>
+							<canvas id="dosExpresionesSinUnionc" class="animation" width="800px"
+								height="400px"></canvas>
 							<br>
-							<label for="dosExpresionesSinUnionv">Velocidad de animacion</label>
+							<label for="dosExpresionesSinUnionv">Velocidad de animación</label>
 							<input id="dosExpresionesSinUnionv" type="range" min="1000" max="4000" step="100">
 
 							<center>
+								<button id="boton-dosExpresionesSinUnion-toBack" class="interact-btn"><span
+									class="fas fa-backward"></span></button>
+								<button id="boton-dosExpresionesSinUnion" class="interact-btn">Pausar</button>
 								<button id="boton-dosExpresionesSinUnion-toFront"
-									class="interact-btn">Adelantar</button>
-								<button id="boton-dosExpresionesSinUnion" class="interact-btn">Pausa</button>
-								<button id="boton-dosExpresionesSinUnion-toBack" class="interact-btn">Retrasar</button>
+									class="interact-btn"><span
+									class="fas fa-forward"></span></button>
+								<button id="boton-dosExpresionesSinUnion-repeat" class="interact-btn">Repetir</button>
 							</center>
 						</div>
 						<div class="footer">
@@ -608,16 +624,20 @@
 							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
 									onclick="unfreeze_gif('rotator4', 'img/animacionConcatenacion.gif')" /></center>
 							-->
-							<canvas id="expresionesConcatenadasc" width="800px" height="400px"></canvas>
+							<canvas id="expresionesConcatenadasc" class="animation" width="800px"
+								height="400px"></canvas>
 							<br>
-							<label for="expresionesConcatenadasv">Velocidad de animacion</label>
+							<label for="expresionesConcatenadasv">Velocidad de animación</label>
 							<input id="expresionesConcatenadasv" type="range" min="1000" max="4000" step="100">
 
 							<center>
+								<button id="boton-expresionesConcatenadas-toBack" class="interact-btn"><span
+									class="fas fa-backward"></span></button>
+								<button id="boton-expresionesConcatenadas" class="interact-btn">Pausar</button>
 								<button id="boton-expresionesConcatenadas-toFront"
-									class="interact-btn">Adelantar</button>
-								<button id="boton-expresionesConcatenadas" class="interact-btn">Pausa</button>
-								<button id="boton-expresionesConcatenadas-toBack" class="interact-btn">Retrasar</button>
+									class="interact-btn"><span
+									class="fas fa-forward"></span></button>
+								<button id="boton-expresionesConcatenadas-repeat" class="interact-btn">Repetir</button>
 							</center>
 						</div>
 						<div class="footer">
@@ -642,15 +662,18 @@
 							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
 									onclick="unfreeze_gif('rotator5', 'img/animacionCierreEstrella.gif')" /></center>
 							-->
-							<canvas id="cierreDeEstrellac" width="800px" height="400px"></canvas>
+							<canvas id="cierreDeEstrellac" class="animation" width="800px" height="400px"></canvas>
 							<br>
-							<label for="cierreDeEstrellav">Velocidad de animacion</label>
+							<label for="cierreDeEstrellav">Velocidad de animación</label>
 							<input id="cierreDeEstrellav" type="range" min="1000" max="4000" step="100">
 
 							<center>
-								<button id="boton-cierreDeEstrella-toFront" class="interact-btn">Adelantar</button>
-								<button id="boton-cierreDeEstrella" class="interact-btn">Pausa</button>
-								<button id="boton-cierreDeEstrella-toBack" class="interact-btn">Retrasar</button>
+								<button id="boton-cierreDeEstrella-toBack" class="interact-btn"><span
+									class="fas fa-backward"></span></button>
+								<button id="boton-cierreDeEstrella" class="interact-btn">Pausar</button>
+								<button id="boton-cierreDeEstrella-toFront" class="interact-btn"><span
+									class="fas fa-forward"></span></button>
+								<button id="boton-cierreDeEstrella-repeat" class="interact-btn">Repetir</button>
 							</center>
 						</div>
 						<div class="footer">
@@ -676,16 +699,20 @@
 							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
 									onclick="unfreeze_gif('rotator6', 'img/animacionPrecedencia.gif')" /></center>
 							-->
-							<canvas id="precedenciaDeOperadoresc" width="800px" height="400px"></canvas>
+							<canvas id="precedenciaDeOperadoresc" class="animation" width="800px"
+								height="400px"></canvas>
 							<br>
-							<label for="precedenciaDeOperadoresv">Velocidad de animacion</label>
+							<label for="precedenciaDeOperadoresv">Velocidad de animación</label>
 							<input id="precedenciaDeOperadoresv" type="range" min="1000" max="4000" step="100">
 
 							<center>
+								<button id="boton-precedenciaDeOperadores-toBack" class="interact-btn"><span
+									class="fas fa-backward"></span></button>
+								<button id="boton-precedenciaDeOperadores" class="interact-btn">Pausar</button>
 								<button id="boton-precedenciaDeOperadores-toFront"
-									class="interact-btn">Adelantar</button>
-								<button id="boton-precedenciaDeOperadores" class="interact-btn">Pausa</button>
-								<button id="boton-precedenciaDeOperadores-toBack" class="interact-btn">Retrasar</button>
+									class="interact-btn"><span
+									class="fas fa-forward"></span></button>
+								<button id="boton-precedenciaDeOperadores-repeat" class="interact-btn">Repetir</button>
 							</center>
 						</div>
 						<div class="footer">
@@ -711,15 +738,18 @@
 							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
 									onclick="unfreeze_gif('rotator7', 'img/animacionCompletez1.gif')" /></center>
 							-->
-							<canvas id="completez1c" width="800px" height="400px"></canvas>
+							<canvas id="completez1c" class="animation" width="800px" height="400px"></canvas>
 							<br>
-							<label for="completez1v">Velocidad de animacion</label>
+							<label for="completez1v">Velocidad de animación</label>
 							<input id="completez1v" type="range" min="1000" max="4000" step="100">
 
 							<center>
-								<button id="boton-completez1-toFront" class="interact-btn">Adelantar</button>
-								<button id="boton-completez1" class="interact-btn">Pausa</button>
-								<button id="boton-completez1-toBack" class="interact-btn">Retrasar</button>
+								<button id="boton-completez1-toBack" class="interact-btn"><span
+									class="fas fa-backward"></span></button>
+								<button id="boton-completez1" class="interact-btn">Pausar</button>
+								<button id="boton-completez1-toFront" class="interact-btn"><span
+									class="fas fa-forward"></span></button>
+								<button id="boton-completez1-repeat" class="interact-btn">Repetir</button>
 							</center>
 						</div>
 						<div class="footer">
@@ -743,15 +773,18 @@
 									onclick="unfreeze_gif('rotator8', 'img/animacionCompletez2.gif')" /></center>
 							-->
 
-							<canvas id="completez2c" width="800px" height="400px"></canvas>
+							<canvas id="completez2c" class="animation" width="800px" height="400px"></canvas>
 							<br>
-							<label for="completez2v">Velocidad de animacion</label>
+							<label for="completez2v">Velocidad de animación</label>
 							<input id="completez2v" type="range" min="1000" max="4000" step="100">
 
 							<center>
-								<button id="boton-completez2-toFront" class="interact-btn">Adelantar</button>
-								<button id="boton-completez2" class="interact-btn">Pausa</button>
-								<button id="boton-completez2-toBack" class="interact-btn">Retrasar</button>
+								<button id="boton-completez2-toBack" class="interact-btn"><span
+									class="fas fa-backward"></span></button>
+								<button id="boton-completez2" class="interact-btn">Pausar</button>
+								<button id="boton-completez2-toFront" class="interact-btn"><span
+									class="fas fa-forward"></span></button>
+								<button id="boton-completez2-repeat" class="interact-btn">Repetir</button>
 							</center>
 						</div>
 						<div class="footer">
@@ -774,15 +807,18 @@
 							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
 									onclick="unfreeze_gif('rotator9', 'img/animacionCorreccion.gif')" /></center>
 							-->
-							<canvas id="correccionc" width="800px" height="400px"></canvas>
+							<canvas id="correccionc" class="animation" width="800px" height="400px"></canvas>
 							<br>
-							<label for="correccionv">Velocidad de animacion</label>
+							<label for="correccionv">Velocidad de animación</label>
 							<input id="correccionv" type="range" min="1000" max="4000" step="100">
 
 							<center>
-								<button id="boton-correccion-toFront" class="interact-btn">Adelantar</button>
-								<button id="boton-correccion" class="interact-btn">Pausa</button>
-								<button id="boton-correccion-toBack" class="interact-btn">Retrasar</button>
+								<button id="boton-correccion-toBack" class="interact-btn"><span
+									class="fas fa-backward"></span></button>
+								<button id="boton-correccion" class="interact-btn">Pausar</button>
+								<button id="boton-correccion-toFront" class="interact-btn"><span
+									class="fas fa-forward"></span></button>
+								<button id="boton-correccion-repeat" class="interact-btn">Repetir</button>
 							</center>
 						</div>
 
@@ -806,15 +842,18 @@
 							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
 									onclick="unfreeze_gif('rotator10', 'img/ejemplo1.gif')" /></center>
 							-->
-							<canvas id="ejemplo1c" width="800px" height="400px"></canvas>
+							<canvas id="ejemplo1c" class="animation" width="800px" height="400px"></canvas>
 							<br>
-							<label for="ejemplo1v">Velocidad de animacion</label>
+							<label for="ejemplo1v">Velocidad de animación</label>
 							<input id="ejemplo1v" type="range" min="1000" max="4000" step="100">
 
 							<center>
-								<button id="boton-ejemplo1-toFront" class="interact-btn">Adelantar</button>
-								<button id="boton-ejemplo1" class="interact-btn">Pausa</button>
-								<button id="boton-ejemplo1-toBack" class="interact-btn">Retrasar</button>
+								<button id="boton-ejemplo1-toBack" class="interact-btn"><span
+									class="fas fa-backward"></span></button>
+								<button id="boton-ejemplo1" class="interact-btn">Pausar</button>
+								<button id="boton-ejemplo1-toFront" class="interact-btn"><span
+									class="fas fa-forward"></span></button>
+								<button id="boton-ejemplo1-repeat" class="interact-btn">Repetir</button>
 							</center>
 						</div>
 						<div class="footer">
@@ -837,15 +876,18 @@
 							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
 									onclick="unfreeze_gif('rotator11', 'img/ejemplo2.gif')" /></center>
 							-->
-							<canvas id="ejemplo2c" width="800px" height="400px"></canvas>
+							<canvas id="ejemplo2c" class="animation" width="800px" height="400px"></canvas>
 							<br>
-							<label for="ejemplo2v">Velocidad de animacion</label>
+							<label for="ejemplo2v">Velocidad de animación</label>
 							<input id="ejemplo2v" type="range" min="1000" max="4000" step="100">
 
 							<center>
-								<button id="boton-ejemplo2-toFront" class="interact-btn">Adelantar</button>
-								<button id="boton-ejemplo2" class="interact-btn">Pausa</button>
-								<button id="boton-ejemplo2-toBack" class="interact-btn">Retrasar</button>
+								<button id="boton-ejemplo2-toBack" class="interact-btn"><span
+									class="fas fa-backward"></span></button>
+								<button id="boton-ejemplo2" class="interact-btn">Pausar</button>
+								<button id="boton-ejemplo2-toFront" class="interact-btn"><span
+									class="fas fa-forward"></span></button>
+								<button id="boton-ejemplo2-repeat" class="interact-btn">Repetir</button>
 							</center>
 						</div>
 						<div class="footer">
@@ -868,15 +910,18 @@
 							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
 									onclick="unfreeze_gif('rotator12', 'img/ejemplo3.gif')" /></center>
 							-->
-							<canvas id="ejemplo3c" width="800px" height="400px"></canvas>
+							<canvas id="ejemplo3c" class="animation" width="800px" height="400px"></canvas>
 							<br>
-							<label for="ejemplo3v">Velocidad de animacion</label>
+							<label for="ejemplo3v">Velocidad de animación</label>
 							<input id="ejemplo3v" type="range" min="1000" max="4000" step="100">
 
 							<center>
-								<button id="boton-ejemplo3-toFront" class="interact-btn">Adelantar</button>
-								<button id="boton-ejemplo3" class="interact-btn">Pausa</button>
-								<button id="boton-ejemplo3-toBack" class="interact-btn">Retrasar</button>
+								<button id="boton-ejemplo3-toBack" class="interact-btn"><span
+									class="fas fa-backward"></span></button>
+								<button id="boton-ejemplo3" class="interact-btn">Pausar</button>
+								<button id="boton-ejemplo3-toFront" class="interact-btn"><span
+									class="fas fa-forward"></span></button>
+								<button id="boton-ejemplo3-repeat" class="interact-btn">Repetir</button>
 							</center>
 						</div>
 						<div class="footer">
@@ -899,15 +944,18 @@
 							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
 									onclick="unfreeze_gif('rotator13', 'img/ejemplo4.gif')" /></center>
 							-->
-							<canvas id="ejemplo4c" width="800px" height="400px"></canvas>
+							<canvas id="ejemplo4c" class="animation" width="800px" height="400px"></canvas>
 							<br>
-							<label for="ejemplo4v">Velocidad de animacion</label>
+							<label for="ejemplo4v">Velocidad de animación</label>
 							<input id="ejemplo4v" type="range" min="1000" max="4000" step="100">
 
 							<center>
-								<button id="boton-ejemplo4-toFront" class="interact-btn">Adelantar</button>
-								<button id="boton-ejemplo4" class="interact-btn">Pausa</button>
-								<button id="boton-ejemplo4-toBack" class="interact-btn">Retrasar</button>
+								<button id="boton-ejemplo4-toBack" class="interact-btn"><span
+									class="fas fa-backward"></span></button>
+								<button id="boton-ejemplo4" class="interact-btn">Pausar</button>
+								<button id="boton-ejemplo4-toFront" class="interact-btn"><span
+									class="fas fa-forward"></span></button>
+								<button id="boton-ejemplo4-repeat" class="interact-btn">Repetir</button>
 							</center>
 						</div>
 						<div class="footer">
@@ -917,9 +965,39 @@
 				</div>
 			</div>
 
+			<!---NUEVA SECCIÓN MODALS DEL GENERADOR ER------------------------------------------------------------------->
 
+			<div id="modalGenerador" class="modal">
+				<div class="flex" id="flexGenerador">
+					<div class="contenido-modal">
+						<div class="modal-header flex">
+							<h2>Animaciones ER - Generador</h2>
+							<span class="close" id="closeGenerador">&times;</span>
+						</div>
+						<div class="modal-body">
 
-			<!-- INICIA SECCIONES DE EJEMPLOS-------------------------------------- -->
+							<canvas id="generadorc" class="animation" width="800px" height="400px"></canvas>
+							<br>
+							<label for="generadorv">Velocidad de animación</label>
+							<input id="generadorv" type="range" min="1000" max="4000" step="100">
+
+							<center>
+								<button id="boton-generador-toBack" class="interact-btn"><span
+									class="fas fa-backward"></span></button>
+								<button id="boton-generador" class="interact-btn">Pausar</button>
+								<button id="boton-generador-toFront" class="interact-btn"><span
+									class="fas fa-forward"></span></button>
+								<button id="boton-generador-repeat" class="interact-btn">Repetir</button>
+							</center>
+						</div>
+						<div class="footer">
+							<h3>Derechos Reservados &copy;</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- INICIA SECCIONES DE EJEMPLOS---------------------------------------------------------------------------->
 
 			<article id="alfabeto0">
 				<h1>Generador de Expresiones</h1>
@@ -936,24 +1014,53 @@
 					</ul>
 					<h5>------------------------ ER = a*b* ------------------------</h5>
 					<table class="content-table">
-						<thead>
+						<colgroup>
+							<colgroup span="2">
+								<colgroup span="2">
+								<thead>
 							<tr>
-								<th>Aceptadas</th>
-								<th>Rechazadas</th>
+								<th colspan="2">Aceptadas</th>
+								<th colspan="2">Rechazadas</th>
 							</tr>
-						</thead>
+							</thead>
+						<tr>
+							<th>Animación</th>
+							<th>Palabra</th>
+							<th>Animación</th>
+							<th>Palabra</th>
+						</tr>
 						<tbody>
 							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A0E1A1"><span class="fas fa-play"></span></a>
+								</td>
 								<td><b>a</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A0E1R1"><span class="fas fa-play"></span></a>
+								</td>
 								<td><b>ba</b></td>
 							</tr>
-							<tr class="active-row">
+							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A0E1A2"><span class="fas fa-play"></span></a>
+								</td>
 								<td><b>aaaa</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A0E1R2"><span class="fas fa-play"></span></a>
+								</td>
 								<td><b>aaba</b></td>
 							</tr>
 							<tr>
+
+								<td>
+									<a class="example-btn" href="#" id="A0E1A3"><span class="fas fa-play"></span></a>
+								</td>
 								<td><b>aabb</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A0E1R3"><span class="fas fa-play"></span></a>
+								</td>
 								<td><b>bbba</b></td>
+
 							</tr>
 						</tbody>
 					</table>
@@ -965,24 +1072,56 @@
 					</ul>
 					<h5>------------------------ ER = a*b*(ab) ------------------------</h5>
 					<table class="content-table">
-						<thead>
+						<colgroup>
+							<colgroup span="2">
+								<colgroup span="2">
+								<thead>
 							<tr>
-								<th>Aceptadas</th>
-								<th>Rechazadas</th>
+								<th colspan="2">Aceptadas</th>
+								<th colspan="2">Rechazadas</th>
 							</tr>
-						</thead>
+							</thead>
+						<tr>
+							<th>Animación</th>
+							<th>Palabra</th>
+							<th>Animación</th>
+							<th>Palabra</th>
+						</tr>
 						<tbody>
 							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A0E2A1"><span class="fas fa-play"></span></a>
+								</td>
 								<td><b>ab</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A0E2R1"><span class="fas fa-play"></span></a>
+								</td>
 								<td><b>ba</b></td>
 							</tr>
-							<tr class="active-row">
+							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A0E2A2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>aaaab</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A0E2R2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>ababa</b></td>
 							</tr>
 							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A0E2A3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>aabbab</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A0E2R3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>abbbba</b></td>
+
 							</tr>
 						</tbody>
 					</table>
@@ -994,24 +1133,59 @@
 					</ul>
 					<h5>------------------------ ER = (ba + ab)*a ------------------------</h5>
 					<table class="content-table">
-						<thead>
+						<colgroup>
+							<colgroup span="2">
+								<colgroup span="2">
+								<thead>
 							<tr>
-								<th>Aceptadas</th>
-								<th>Rechazadas</th>
+								<th colspan="2">Aceptadas</th>
+								<th colspan="2">Rechazadas</th>
 							</tr>
-						</thead>
+							</thead>
+						<tr>
+							<th>Animación</th>
+							<th>Palabra</th>
+							<th>Animación</th>
+							<th>Palabra</th>
+						</tr>
 						<tbody>
 							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A0E3A1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>a</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A0E3R1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>baaa</b></td>
 							</tr>
-							<tr class="active-row">
+							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A0E3A2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>baaba</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A0E3R2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>aaaba</b></td>
 							</tr>
 							<tr>
+
+								<td>
+									<a class="example-btn" href="#" id="A0E3A3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>ababa</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A0E3R3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>abaab</b></td>
+
 							</tr>
 						</tbody>
 					</table>
@@ -1023,24 +1197,59 @@
 					</ul>
 					<h5>------------------------ ER = a*(b+a)* ------------------------</h5>
 					<table class="content-table">
-						<thead>
+						<colgroup>
+							<colgroup span="2">
+								<colgroup span="2">
+								<thead>
 							<tr>
-								<th>Aceptadas</th>
-								<th>Rechazadas</th>
+								<th colspan="2">Aceptadas</th>
+								<th colspan="2">Rechazadas</th>
 							</tr>
-						</thead>
+							</thead>
+						<tr>
+							<th>Animación</th>
+							<th>Palabra</th>
+							<th>Animación</th>
+							<th>Palabra</th>
+						</tr>
 						<tbody>
 							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A0E4A1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>Ɛ</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A0E4R1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>ba</b></td>
 							</tr>
-							<tr class="active-row">
+							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A0E4A2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>aaaa</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A0E4R2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>bbbba</b></td>
 							</tr>
 							<tr>
+
+								<td>
+									<a class="example-btn" href="#" id="A0E4A3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>abbbbb</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A0E4R3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>aaaba</b></td>
+
 							</tr>
 						</tbody>
 					</table>
@@ -1052,30 +1261,64 @@
 					</ul>
 					<h5>------------------------ ER = (a+b)aab* ------------------------</h5>
 					<table class="content-table">
-						<thead>
+						<colgroup>
+							<colgroup span="2">
+								<colgroup span="2">
+								<thead>
 							<tr>
-								<th>Aceptadas</th>
-								<th>Rechazadas</th>
+								<th colspan="2">Aceptadas</th>
+								<th colspan="2">Rechazadas</th>
 							</tr>
-						</thead>
+							</thead>
+						<tr>
+							<th>Animación</th>
+							<th>Palabra</th>
+							<th>Animación</th>
+							<th>Palabra</th>
+						</tr>
 						<tbody>
 							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A0E5A1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>baa</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A0E5R1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>aa</b></td>
 							</tr>
-							<tr class="active-row">
+							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A0E5A2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>aaa</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A0E5R2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>aaaab</b></td>
 							</tr>
 							<tr>
+
+								<td>
+									<a class="example-btn" href="#" id="A0E5A3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>aaabbbb</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A0E5R3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>abbbb</b></td>
+
 							</tr>
 						</tbody>
 					</table>
 				</div>
 			</article>
-
 
 			<article id="alfabeto1">
 				<h1>Generador de Expresiones</h1>
@@ -1092,24 +1335,59 @@
 					</ul>
 					<h5>---------------------- ER = (a+b)b*a+c* ----------------------</h5>
 					<table class="content-table">
-						<thead>
+						<colgroup>
+							<colgroup span="2">
+								<colgroup span="2">
+								<thead>
 							<tr>
-								<th>Aceptadas</th>
-								<th>Rechazadas</th>
+								<th colspan="2">Aceptadas</th>
+								<th colspan="2">Rechazadas</th>
 							</tr>
-						</thead>
+							</thead>
+						<tr>
+							<th>Animación</th>
+							<th>Palabra</th>
+							<th>Animación</th>
+							<th>Palabra</th>
+						</tr>
 						<tbody>
 							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A1E1A1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>aa</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A1E1R1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>bcc</b></td>
 							</tr>
-							<tr class="active-row">
+							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A1E1A2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>bbba</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A1E1R2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>abc</b></td>
 							</tr>
 							<tr>
+							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A1E1A3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>abbbbbacc</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A1E1R3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>acccc</b></td>
+							</tr>
 							</tr>
 						</tbody>
 					</table>
@@ -1121,24 +1399,59 @@
 					</ul>
 					<h5>------------------------ ER = (a+b)b*(b+c)c ------------------------</h5>
 					<table class="content-table">
-						<thead>
+						<colgroup>
+							<colgroup span="2">
+								<colgroup span="2">
+								<thead>
 							<tr>
-								<th>Aceptadas</th>
-								<th>Rechazadas</th>
+								<th colspan="2">Aceptadas</th>
+								<th colspan="2">Rechazadas</th>
 							</tr>
-						</thead>
+							</thead>
+						<tr>
+							<th>Animación</th>
+							<th>Palabra</th>
+							<th>Animación</th>
+							<th>Palabra</th>
+						</tr>
 						<tbody>
 							<tr>
-								<td><b onclick="">abc</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A1E2A1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
+								<td><b>abc</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A1E2R1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>abbbac</b></td>
 							</tr>
-							<tr class="active-row">
+							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A1E2A2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>abbbcc</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A1E2R2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>aabbcc</b></td>
 							</tr>
 							<tr>
+							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A1E2A3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>bbbbbc</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A1E2R3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>aaaacccbbb</b></td>
+							</tr>
 							</tr>
 						</tbody>
 					</table>
@@ -1150,24 +1463,59 @@
 					</ul>
 					<h5>------------------------ ER = ab*c ------------------------</h5>
 					<table class="content-table">
-						<thead>
+						<colgroup>
+							<colgroup span="2">
+								<colgroup span="2">
+								<thead>
 							<tr>
-								<th>Aceptadas</th>
-								<th>Rechazadas</th>
+								<th colspan="2">Aceptadas</th>
+								<th colspan="2">Rechazadas</th>
 							</tr>
-						</thead>
+							</thead>
+						<tr>
+							<th>Animación</th>
+							<th>Palabra</th>
+							<th>Animación</th>
+							<th>Palabra</th>
+						</tr>
 						<tbody>
 							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A1E3A1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>ac</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A1E3R1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>baaac</b></td>
 							</tr>
-							<tr class="active-row">
+							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A1E3A2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>abc</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A1E3R2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>caaab</b></td>
 							</tr>
 							<tr>
+							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A1E3A3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>abbbbbc</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A1E3R3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>bcaa</b></td>
+							</tr>
 							</tr>
 						</tbody>
 					</table>
@@ -1179,24 +1527,59 @@
 					</ul>
 					<h5>------------------------ ER = (aa)*b(ab)c* ------------------------</h5>
 					<table class="content-table">
-						<thead>
+						<colgroup>
+							<colgroup span="2">
+								<colgroup span="2">
+								<thead>
 							<tr>
-								<th>Aceptadas</th>
-								<th>Rechazadas</th>
+								<th colspan="2">Aceptadas</th>
+								<th colspan="2">Rechazadas</th>
 							</tr>
-						</thead>
+							</thead>
+						<tr>
+							<th>Animación</th>
+							<th>Palabra</th>
+							<th>Animación</th>
+							<th>Palabra</th>
+						</tr>
 						<tbody>
 							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A1E4A1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>bab</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A1E4R1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>baac</b></td>
 							</tr>
-							<tr class="active-row">
+							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A1E4A2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>aaab</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A1E4R2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>aaababc</b></td>
 							</tr>
 							<tr>
+							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A1E4A3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>babcccc</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A1E4R3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>aaaaab</b></td>
+							</tr>
 							</tr>
 						</tbody>
 					</table>
@@ -1208,24 +1591,59 @@
 					</ul>
 					<h5>------------------------ ER = a*(a+b)c* ------------------------</h5>
 					<table class="content-table">
-						<thead>
+						<colgroup>
+							<colgroup span="2">
+								<colgroup span="2">
+								<thead>
 							<tr>
-								<th>Aceptadas</th>
-								<th>Rechazadas</th>
+								<th colspan="2">Aceptadas</th>
+								<th colspan="2">Rechazadas</th>
 							</tr>
-						</thead>
+							</thead>
+						<tr>
+							<th>Animación</th>
+							<th>Palabra</th>
+							<th>Animación</th>
+							<th>Palabra</th>
+						</tr>
 						<tbody>
 							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A1E5A1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>a</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A1E5R1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>bca</b></td>
 							</tr>
-							<tr class="active-row">
+							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A1E5A2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>b</b></td>
-								<td><b>aaacb</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A1E5R2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
+								<td><b>aaabc</b></td>
 							</tr>
 							<tr>
+							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A1E5A3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>aaaac</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A1E5R3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>aabbcc</b></td>
+							</tr>
 							</tr>
 						</tbody>
 					</table>
@@ -1247,24 +1665,59 @@
 					</ul>
 					<h5>------------------- ER = (ab)*(c+d)d* -------------------</h5>
 					<table class="content-table">
-						<thead>
+						<colgroup>
+							<colgroup span="2">
+								<colgroup span="2">
+								<thead>
 							<tr>
-								<th>Aceptadas</th>
-								<th>Rechazadas</th>
+								<th colspan="2">Aceptadas</th>
+								<th colspan="2">Rechazadas</th>
 							</tr>
-						</thead>
+							</thead>
+						<tr>
+							<th>Animación</th>
+							<th>Palabra</th>
+							<th>Animación</th>
+							<th>Palabra</th>
+						</tr>
 						<tbody>
 							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A2E1A1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>c</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A2E1R1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>bacd</b></td>
 							</tr>
-							<tr class="active-row">
+							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A2E1A2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>abcd</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A2E1R2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>abccd</b></td>
 							</tr>
 							<tr>
+							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A2E1A3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>ababdddd</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A2E1R3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>acccddd</b></td>
+							</tr>
 							</tr>
 						</tbody>
 					</table>
@@ -1277,24 +1730,59 @@
 					</ul>
 					<h5>------------------------ ER = a*b(b+c)d* ------------------------</h5>
 					<table class="content-table">
-						<thead>
+						<colgroup>
+							<colgroup span="2">
+								<colgroup span="2">
+								<thead>
 							<tr>
-								<th>Aceptadas</th>
-								<th>Rechazadas</th>
+								<th colspan="2">Aceptadas</th>
+								<th colspan="2">Rechazadas</th>
 							</tr>
-						</thead>
+							</thead>
+						<tr>
+							<th>Animación</th>
+							<th>Palabra</th>
+							<th>Animación</th>
+							<th>Palabra</th>
+						</tr>
 						<tbody>
 							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A2E2A1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>bc</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A2E2R1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>bbbc</b></td>
 							</tr>
-							<tr class="active-row">
+							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A2E2A2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>bbd</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A2E2R2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>abbbd</b></td>
 							</tr>
 							<tr>
+							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A2E2A3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>aaabcddd</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A2E2R3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>cddddd</b></td>
+							</tr>
 							</tr>
 						</tbody>
 					</table>
@@ -1307,24 +1795,59 @@
 					</ul>
 					<h5>------------------------ ER = ab*cd* ------------------------</h5>
 					<table class="content-table">
-						<thead>
+						<colgroup>
+							<colgroup span="2">
+								<colgroup span="2">
+								<thead>
 							<tr>
-								<th>Aceptadas</th>
-								<th>Rechazadas</th>
+								<th colspan="2">Aceptadas</th>
+								<th colspan="2">Rechazadas</th>
 							</tr>
-						</thead>
+							</thead>
+						<tr>
+							<th>Animación</th>
+							<th>Palabra</th>
+							<th>Animación</th>
+							<th>Palabra</th>
+						</tr>
 						<tbody>
 							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A2E3A1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>ac</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A2E3R1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>bcd</b></td>
 							</tr>
-							<tr class="active-row">
+							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A2E3A2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>abc</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A2E3R2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>aabccd</b></td>
 							</tr>
+
 							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A2E3A3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>acddd</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A2E3R3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>abddd</b></td>
+
 							</tr>
 						</tbody>
 					</table>
@@ -1337,24 +1860,59 @@
 					</ul>
 					<h5>------------------------ ER = (a+b)c*(cd) ------------------------</h5>
 					<table class="content-table">
-						<thead>
+						<colgroup>
+							<colgroup span="2">
+								<colgroup span="2">
+								<thead>
 							<tr>
-								<th>Aceptadas</th>
-								<th>Rechazadas</th>
+								<th colspan="2">Aceptadas</th>
+								<th colspan="2">Rechazadas</th>
 							</tr>
-						</thead>
+							</thead>
+						<tr>
+							<th>Animación</th>
+							<th>Palabra</th>
+							<th>Animación</th>
+							<th>Palabra</th>
+						</tr>
 						<tbody>
 							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A2E4A1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>acd</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A2E4R1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>ccccd</b></td>
 							</tr>
-							<tr class="active-row">
+							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A2E4A2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>bcccd</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A2E4R2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>accdc</b></td>
 							</tr>
 							<tr>
+							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A2E4A3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>accccd</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A2E4R3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>cd</b></td>
+							</tr>
 							</tr>
 						</tbody>
 					</table>
@@ -1366,24 +1924,59 @@
 					</ul>
 					<h5>------------------------ ER = a*bcd* ------------------------</h5>
 					<table class="content-table">
-						<thead>
+						<colgroup>
+							<colgroup span="2">
+								<colgroup span="2">
+								<thead>
 							<tr>
-								<th>Aceptadas</th>
-								<th>Rechazadas</th>
+								<th colspan="2">Aceptadas</th>
+								<th colspan="2">Rechazadas</th>
 							</tr>
-						</thead>
+							</thead>
+						<tr>
+							<th>Animación</th>
+							<th>Palabra</th>
+							<th>Animación</th>
+							<th>Palabra</th>
+						</tr>
 						<tbody>
 							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A2E5A1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>bc</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A2E5R1"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>aacb</b></td>
 							</tr>
-							<tr class="active-row">
+							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A2E5A2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>abc</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A2E5R2"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>cbddd</b></td>
 							</tr>
 							<tr>
+							<tr>
+								<td>
+									<a class="example-btn" href="#" id="A2E5A3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>bcddd</b></td>
+								<td>
+									<a class="example-btn" href="#" id="A2E5R3"><span class="fas fa-play"></span><span
+											class="tab-text"></a>
+								</td>
 								<td><b>abcccd</b></td>
+							</tr>
 							</tr>
 						</tbody>
 					</table>
@@ -1392,11 +1985,12 @@
 
 		</div>
 	</div>
+	<script src="js/scriptGenerador.js"></script>
 	<script src="js/scriptModals.js"></script>
 	<script src="js/scriptControlGIF.js"></script>
 	<script src="js/questions.js"></script>
 	<script src="js/scriptQuestions.js"></script>
-	<script src="js/scriptEvaluacion.js" async defer></script>
+	<script src="js/scriptEvaluacion.js" async></script>
 </body>
 
 </html>

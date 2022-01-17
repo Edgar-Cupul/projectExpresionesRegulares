@@ -64,6 +64,10 @@ function Animador(frames, direc, animacion, closer) {
         const botonAvanzar = document.querySelector("#boton-" + animacion + "-toFront");
         const botonVelocidad = document.querySelector("#boton-" + animacion);
         const botonRetroceder = document.querySelector("#boton-" + animacion + "-toBack");
+        const botonRepetir = document.querySelector("#boton-" + animacion + "-repeat");
+
+        //Control de estado
+        let reproduciendo = true;
 
         botonStoper.onclick = () => {
             contadorDeFrames = 1;
@@ -81,12 +85,15 @@ function Animador(frames, direc, animacion, closer) {
         }
 
         botonVelocidad.onclick = () => {
-            if (botonVelocidad.innerHTML == "Pausa") {
+
+            if (reproduciendo == true) { //Debe pausar
                 control.stop();
-                botonVelocidad.innerHTML = "Reanudar";
+                botonVelocidad.innerHTML = 'Reanudar'; //Debe reanudar
+                reproduciendo = false;
             } else {
                 control.start();
-                botonVelocidad.innerHTML = "Pausa";
+                botonVelocidad.innerHTML = 'Pausar'; //Debe pausar
+                reproduciendo = true;
             }
         }
 
@@ -95,7 +102,16 @@ function Animador(frames, direc, animacion, closer) {
         }
 
         botonRetroceder.onclick = () => {
-            contadorDeFrames = contadorDeFrames - 1;
+            contadorDeFrames = contadorDeFrames - 3;
+        }
+
+        botonRepetir.onclick = () => {
+            contadorDeFrames = 0;
+
+            if(reproduciendo == false) {
+                control.start();
+                reproduciendo = true;
+            }
         }
 
         var maxValue = parseInt(inputVelocidad.max);
@@ -110,6 +126,10 @@ function Animador(frames, direc, animacion, closer) {
 
 
         var control = new Timer(function animador() {
+            if (contadorDeFrames > frames) {
+                control.stop();
+                reproduciendo = false;
+            }
             console.log("Mostrando este mensaje cada:" + velocidadAnimacion);
             var limite = 0;
             var intervalo
@@ -117,7 +137,7 @@ function Animador(frames, direc, animacion, closer) {
             var canvas = document.getElementById(animacion + "c");
             var ctx = canvas.getContext('2d');
 
-            if (contadorDeFrames == frames + 2) {
+            if (contadorDeFrames > frames + 2) {
                 alert("Ha habido un error de conteo. Recarga la página por favor.");
             }
 
@@ -125,13 +145,6 @@ function Animador(frames, direc, animacion, closer) {
             ctx.drawImage(diapositiva, 60, 0, 700, 393);
 
             contadorDeFrames += 1;
-
-            if (contadorDeFrames > frames + 1) {
-                control.stop();
-                //alert(velocidadAnimacion);
-                //alert("Proceso concluido.")
-            }
-
         }, velocidadAnimacion);
 
     }
