@@ -38,17 +38,15 @@ class Timer {
  * @param {*} closer Nombre de el icono que cierra la ventana modal.
  */
 function Animador(frames, direc, animacion, closer) {
+
     this.frames = frames;
     this.direc = direc;
     this.animacion = animacion;
     this.closer = closer;
 
-    this.testFunct = function () {
-        console.log("You have now: " + frames + "," + direc + ", " + animacion);
 
-        //alert("Passed!");
-    }
-
+    var canvas = document.getElementById(animacion + "c");
+    var ctx = canvas.getContext('2d');
 
     this.animate = function () {
         var diapositiva = new Image();
@@ -73,19 +71,19 @@ function Animador(frames, direc, animacion, closer) {
             contadorDeFrames = 1;
             control.reset();
             control.stop();
-        }
+        };
 
         inputVelocidad.oninput = () => {
+            control.stop();
             //reiniciamos el contador de frames al mover algo acá.
             contadorDeFrames = 1;
 
             //salidaVelocidad.innerHTML = inputVelocidad.value;
             velocidadAnimacion = parseInt(inputVelocidad.value);
             control.reset(parseInt(inputVelocidad.value));
-        }
+        };
 
         botonVelocidad.onclick = () => {
-
             if (reproduciendo == true) { //Debe pausar
                 control.stop();
                 botonVelocidad.innerHTML = 'Reanudar'; //Debe reanudar
@@ -95,24 +93,25 @@ function Animador(frames, direc, animacion, closer) {
                 botonVelocidad.innerHTML = 'Pausar'; //Debe pausar
                 reproduciendo = true;
             }
-        }
+        };
+
 
         botonAvanzar.onclick = () => {
             contadorDeFrames = contadorDeFrames + 1;
-        }
+        };
 
         botonRetroceder.onclick = () => {
             contadorDeFrames = contadorDeFrames - 3;
-        }
+        };
 
         botonRepetir.onclick = () => {
-            contadorDeFrames = 0;
+            contadorDeFrames = 1;
 
-            if(reproduciendo == false) {
+            if (reproduciendo == false) {
                 control.start();
                 reproduciendo = true;
             }
-        }
+        };
 
         var maxValue = parseInt(inputVelocidad.max);
         var minValue = parseInt(inputVelocidad.min);
@@ -124,18 +123,14 @@ function Animador(frames, direc, animacion, closer) {
 
         var velocidadAnimacion = parseInt(defaultValue);
 
-
+        //Estableciendo un timer
         var control = new Timer(function animador() {
+
             if (contadorDeFrames > frames) {
                 control.stop();
                 reproduciendo = false;
             }
             console.log("Mostrando este mensaje cada:" + velocidadAnimacion);
-            var limite = 0;
-            var intervalo
-
-            var canvas = document.getElementById(animacion + "c");
-            var ctx = canvas.getContext('2d');
 
             if (contadorDeFrames > frames + 2) {
                 alert("Ha habido un error de conteo. Recarga la página por favor.");
@@ -143,10 +138,28 @@ function Animador(frames, direc, animacion, closer) {
 
             diapositiva.src = direc + contadorDeFrames + ".PNG";
             ctx.drawImage(diapositiva, 60, 0, 700, 393);
-
+            
             contadorDeFrames += 1;
+            
         }, velocidadAnimacion);
 
+    };
+
+
+    this.setFrames = function (newFrames) {
+        frames = newFrames;
+    }
+
+    this.setDirec = function (newDirec) {
+        direc = newDirec;
+    }
+
+    this.getFrames = function () {
+        return frames;
+    }
+
+    this.getDirec = function () {
+        return direc;
     }
 
 }
