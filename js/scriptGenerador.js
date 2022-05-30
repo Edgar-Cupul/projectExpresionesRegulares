@@ -2,11 +2,16 @@
 let modalGenerador = document.getElementById('modalGenerador');
 let flexGenerador = document.getElementById('flexGenerador');
 let cerrarGenerador = document.getElementById('closeGenerador');
+let regresarGenerador = document.getElementById('regresarGenerador');
 
-var animacionGenerador = new Animador(11, "img/animation/generador/Primer_Alfabeto/1_primera_expresion/aceptadas/palabra_a/", "generador", 'closeGenerador')
+var animacionGenerador = new Animador(11, "img/animation/generador/Primer_Alfabeto/1_primera_expresion/aceptadas/palabra_a/", "generador", 'closeGenerador', 'generador')
 
 cerrarGenerador.addEventListener('click', function () {
     modalGenerador.style.display = 'none';
+});
+
+regresarGenerador.addEventListener('click', function () {
+    modalGenerador.style.display = 'none'
 });
 
 window.addEventListener('click', function (e) {
@@ -518,7 +523,7 @@ abrirA1E5R3.addEventListener('click', function () {
 
 //ALFABETO 2
 let abrirA2E1A1 = document.getElementById('A2E1A1');
-abrirA2E1A1.addEventListener('click', function (){
+abrirA2E1A1.addEventListener('click', function () {
     modalGenerador.style.display = 'block';
     animacionGenerador.setFrames(14);
     animacionGenerador.setDirec("img/animation/generador/Tercer_Alfabeto/1_primera_expresion/aceptadas/Palabra_c/");
@@ -526,7 +531,7 @@ abrirA2E1A1.addEventListener('click', function (){
 });
 
 let abrirA2E1A2 = document.getElementById('A2E1A2');
-abrirA2E1A2.addEventListener('click', function (){
+abrirA2E1A2.addEventListener('click', function () {
     modalGenerador.style.display = 'block';
     animacionGenerador.setFrames(14);
     animacionGenerador.setDirec("img/animation/generador/Tercer_Alfabeto/1_primera_expresion/aceptadas/Palabra_abcd/");
@@ -534,7 +539,7 @@ abrirA2E1A2.addEventListener('click', function (){
 });
 
 let abrirA2E1A3 = document.getElementById('A2E1A3');
-abrirA2E1A3.addEventListener('click', function (){
+abrirA2E1A3.addEventListener('click', function () {
     modalGenerador.style.display = 'block';
     animacionGenerador.setFrames(14);
     animacionGenerador.setDirec("img/animation/generador/Tercer_Alfabeto/1_primera_expresion/aceptadas/Palabra_ababdddd/");

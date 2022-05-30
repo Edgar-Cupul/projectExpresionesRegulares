@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="estilosActividades.css">
 	<link rel="stylesheet" href="estilosEval.css">
 	<link rel="stylesheet" href="estilosCanvas.css">
+	<link rel="stylesheet" href="estilosBotonesAnimados.css">
 	<link rel="shortcut icon" href="img/iconBOTER.png" type="image/x-icon">
 
 
@@ -87,10 +88,13 @@
 				<h1>Créditos</h1>
 				<br>
 				<h4 align="center">Elaborado por:</h4>
-				<p id="autores">Br. Alejandro Emmanuel Canche Kú (Programación y Diseño web)</p>
-				<p id="autores">Br. Randy Josue Castro (Revisión Pedagógica y Animaciones)</p>
+				<h6 id="autores">Br. Alejandro Emmanuel Canche Kú (Programación y diseño web)</p>
+				<h6 id="autores">Br. Edgar Rolando Cupul Martín (Programación y diseño web)</p>
+				<h6 id="autores">Br. Randy Josue Castro (Revisión pedagógica y animaciones)</p>
+				<h6 id="autores">Br. Yuraimi Beatriz Ucan Delgado (Revisión pedagógica y animaciones)</p>
+				<h6 id="autores">Br. Karen Guadalupe Cupul Gomez(Revisión pedagógica y animaciones</p>
 				<h4 align="center">Diseño y coordinación general:</h4>
-				<p id="autores">MC. Cinthia Maribel González Segura <b>(gsegura@correo.uady.mx)</b></p>
+				<h6 id="autores">MC. Cinthia Maribel González Segura <b>(gsegura@correo.uady.mx)</b></p>
 			</article>
 
 			<!-- SECCION OPCIONES------------------------------------------------- -->
@@ -474,8 +478,7 @@
 
 			<article id="ejemplosER">
 				<h1>Animaciones ER</h1>
-				<p>Con estos ejercicios de ejemplo a través de animaciones podrás comprender mejor lo visto en la
-					sección de <b>Teoría</b></p>
+				<p>Ejemplos que ilustran la generación de una palabra a partir de una <b>Expresión Regular</b> dada.</p>
 				<br>
 				<ul class="buttonsAnimaciones">
 					<li><a onclick="document.getElementById('clicsAnimaciones').play()" href="#" id="abrir10"><span
@@ -514,25 +517,22 @@
 							<canvas class="animation" id="dosCaminosc" width="800px" height="400px"></canvas>
 							<br>
 							<label for="dosCaminosv">Velocidad de animación</label>
-							<input id="dosCaminosv" type="range" class="velocidad-input" min="1000" max="4000"
+							<input id="dosCaminosv" type="range" class="velocidad-input" min="-4000" max="-1000"
 								step="100">
 
 							<center>
 								<button id="boton-dosCaminos-toBack" class="interact-btn"><span
 										class="fas fa-backward"></span></button>
-								<button id="boton-dosCaminos" class="interact-btn">Pausar</button>
+								<button id="boton-dosCaminos" class="btn-playpause" value="reanudar"></button>
+										
 								<button id="boton-dosCaminos-toFront" class="interact-btn"><span
 										class="fas fa-forward"></span></button>
 								<button id="boton-dosCaminos-repeat" class="interact-btn">Repetir</button>
 							</center>
 
-							<button class="exit-btn" id="boton-dosCaminos-exit"><span class="fas fa-undo"></span><span
-									class="tab-text">Regresar</span></button>
+							<button class="exit-btn" id="regresar1"><span class="fas fa-undo"></span><span
+									class="tab-text">Regresar</span><span class="close" id="close1"></span></button>
 
-							<!--
-							<img id="rotator1" src="img/animacionUnion1.gif">	
-							<center><input class="botonReinicio" value="Reiniciar Animación" type="button" onclick="unfreeze_gif('rotator1', 'img/animacionUnion1.gif')" /></center>
-							-->
 						</div>
 						<div class="footer">
 							<h3>Derechos Reservados &copy;</h3>
@@ -553,17 +553,20 @@
 								height="400px"></canvas>
 							<br>
 							<label for="dosExpresionesConUnionv">Velocidad de animación</label>
-							<input id="dosExpresionesConUnionv" type="range" class="velocidad-input" min="1000" max="4000" step="100">
+							<input id="dosExpresionesConUnionv" type="range" class="velocidad-input" min="-4000"
+								max="-1000" step="100">
 
 							<center>
 								<button id="boton-dosExpresionesConUnion-toBack" class="interact-btn"><span
-									class="fas fa-backward"></span></button>
+										class="fas fa-backward"></span></button>
 								<button id="boton-dosExpresionesConUnion" class="interact-btn">Pausar</button>
-								<button id="boton-dosExpresionesConUnion-toFront"
-									class="interact-btn"><span
-									class="fas fa-forward"></span></button>
+								<button id="boton-dosExpresionesConUnion-toFront" class="interact-btn"><span
+										class="fas fa-forward"></span></button>
 								<button id="boton-dosExpresionesConUnion-repeat" class="interact-btn">Repetir</button>
 							</center>
+
+							<button class="exit-btn" id="regresar2"><span class="fas fa-undo"></span><span
+								class="tab-text">Regresar</span></button>
 
 						</div>
 						<div class="footer">
@@ -581,26 +584,25 @@
 							<span class="close" id="close3">&times;</span>
 						</div>
 						<div class="modal-body">
-							<!--
-							<img id="rotator3" src="img/animacionUnion3.gif">
-							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
-									onclick="unfreeze_gif('rotator3', 'img/animacionUnion3.gif')" /></center>
-							-->
+
 							<canvas id="dosExpresionesSinUnionc" class="animation" width="800px"
 								height="400px"></canvas>
 							<br>
 							<label for="dosExpresionesSinUnionv">Velocidad de animación</label>
-							<input id="dosExpresionesSinUnionv" type="range" min="1000" max="4000" step="100">
+							<input id="dosExpresionesSinUnionv" type="range" min="-4000" max="-1000" step="100">
 
 							<center>
 								<button id="boton-dosExpresionesSinUnion-toBack" class="interact-btn"><span
-									class="fas fa-backward"></span></button>
+										class="fas fa-backward"></span></button>
 								<button id="boton-dosExpresionesSinUnion" class="interact-btn">Pausar</button>
-								<button id="boton-dosExpresionesSinUnion-toFront"
-									class="interact-btn"><span
-									class="fas fa-forward"></span></button>
+								<button id="boton-dosExpresionesSinUnion-toFront" class="interact-btn"><span
+										class="fas fa-forward"></span></button>
 								<button id="boton-dosExpresionesSinUnion-repeat" class="interact-btn">Repetir</button>
 							</center>
+
+							<button class="exit-btn" id="regresar3"><span class="fas fa-undo"></span><span
+								class="tab-text">Regresar</span></button>
+
 						</div>
 						<div class="footer">
 							<h3>Derechos Reservados &copy;</h3>
@@ -619,26 +621,25 @@
 							<span class="close" id="close4">&times;</span>
 						</div>
 						<div class="modal-body">
-							<!--
-							<img id="rotator4" src="img/animacionConcatenacion.gif">
-							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
-									onclick="unfreeze_gif('rotator4', 'img/animacionConcatenacion.gif')" /></center>
-							-->
+
 							<canvas id="expresionesConcatenadasc" class="animation" width="800px"
 								height="400px"></canvas>
 							<br>
 							<label for="expresionesConcatenadasv">Velocidad de animación</label>
-							<input id="expresionesConcatenadasv" type="range" min="1000" max="4000" step="100">
+							<input id="expresionesConcatenadasv" type="range" min="-4000" max="-1000" step="100">
 
 							<center>
 								<button id="boton-expresionesConcatenadas-toBack" class="interact-btn"><span
-									class="fas fa-backward"></span></button>
+										class="fas fa-backward"></span></button>
 								<button id="boton-expresionesConcatenadas" class="interact-btn">Pausar</button>
-								<button id="boton-expresionesConcatenadas-toFront"
-									class="interact-btn"><span
-									class="fas fa-forward"></span></button>
+								<button id="boton-expresionesConcatenadas-toFront" class="interact-btn"><span
+										class="fas fa-forward"></span></button>
 								<button id="boton-expresionesConcatenadas-repeat" class="interact-btn">Repetir</button>
 							</center>
+
+							<button class="exit-btn" id="regresar4"><span class="fas fa-undo"></span><span
+								class="tab-text">Regresar</span></button>
+
 						</div>
 						<div class="footer">
 							<h3>Derechos Reservados &copy;</h3>
@@ -657,24 +658,24 @@
 							<span class="close" id="close5">&times;</span>
 						</div>
 						<div class="modal-body">
-							<!--
-							<img id="rotator5" src="img/animacionCierreEstrella.gif">
-							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
-									onclick="unfreeze_gif('rotator5', 'img/animacionCierreEstrella.gif')" /></center>
-							-->
+
 							<canvas id="cierreDeEstrellac" class="animation" width="800px" height="400px"></canvas>
 							<br>
 							<label for="cierreDeEstrellav">Velocidad de animación</label>
-							<input id="cierreDeEstrellav" type="range" min="1000" max="4000" step="100">
+							<input id="cierreDeEstrellav" type="range" min="-4000" max="-1000" step="100">
 
 							<center>
 								<button id="boton-cierreDeEstrella-toBack" class="interact-btn"><span
-									class="fas fa-backward"></span></button>
+										class="fas fa-backward"></span></button>
 								<button id="boton-cierreDeEstrella" class="interact-btn">Pausar</button>
 								<button id="boton-cierreDeEstrella-toFront" class="interact-btn"><span
-									class="fas fa-forward"></span></button>
+										class="fas fa-forward"></span></button>
 								<button id="boton-cierreDeEstrella-repeat" class="interact-btn">Repetir</button>
 							</center>
+
+							<button class="exit-btn" id="regresar5"><span class="fas fa-undo"></span><span
+								class="tab-text">Regresar</span></button>
+
 						</div>
 						<div class="footer">
 							<h3>Derechos Reservados &copy;</h3>
@@ -694,26 +695,25 @@
 							<span class="close" id="close6">&times;</span>
 						</div>
 						<div class="modal-body">
-							<!--
-							<img id="rotator6" src="img/animacionPrecedencia.gif">
-							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
-									onclick="unfreeze_gif('rotator6', 'img/animacionPrecedencia.gif')" /></center>
-							-->
+
 							<canvas id="precedenciaDeOperadoresc" class="animation" width="800px"
 								height="400px"></canvas>
 							<br>
 							<label for="precedenciaDeOperadoresv">Velocidad de animación</label>
-							<input id="precedenciaDeOperadoresv" type="range" min="1000" max="4000" step="100">
+							<input id="precedenciaDeOperadoresv" type="range" min="-4000" max="-1000" step="100">
 
 							<center>
 								<button id="boton-precedenciaDeOperadores-toBack" class="interact-btn"><span
-									class="fas fa-backward"></span></button>
+										class="fas fa-backward"></span></button>
 								<button id="boton-precedenciaDeOperadores" class="interact-btn">Pausar</button>
-								<button id="boton-precedenciaDeOperadores-toFront"
-									class="interact-btn"><span
-									class="fas fa-forward"></span></button>
+								<button id="boton-precedenciaDeOperadores-toFront" class="interact-btn"><span
+										class="fas fa-forward"></span></button>
 								<button id="boton-precedenciaDeOperadores-repeat" class="interact-btn">Repetir</button>
 							</center>
+
+							<button class="exit-btn" id="regresar6"><span class="fas fa-undo"></span><span
+								class="tab-text">Regresar</span></button>
+
 						</div>
 						<div class="footer">
 							<h3>Derechos Reservados &copy;</h3>
@@ -733,24 +733,24 @@
 							<span class="close" id="close7">&times;</span>
 						</div>
 						<div class="modal-body">
-							<!--Integrar en esta sección parte por parte el canvas
-							<img id="rotator7" src="img/animacionCompletez1.gif">
-							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
-									onclick="unfreeze_gif('rotator7', 'img/animacionCompletez1.gif')" /></center>
-							-->
+
 							<canvas id="completez1c" class="animation" width="800px" height="400px"></canvas>
 							<br>
 							<label for="completez1v">Velocidad de animación</label>
-							<input id="completez1v" type="range" min="1000" max="4000" step="100">
+							<input id="completez1v" type="range" min="-4000" max="-1000" step="100">
 
 							<center>
 								<button id="boton-completez1-toBack" class="interact-btn"><span
-									class="fas fa-backward"></span></button>
+										class="fas fa-backward"></span></button>
 								<button id="boton-completez1" class="interact-btn">Pausar</button>
 								<button id="boton-completez1-toFront" class="interact-btn"><span
-									class="fas fa-forward"></span></button>
+										class="fas fa-forward"></span></button>
 								<button id="boton-completez1-repeat" class="interact-btn">Repetir</button>
 							</center>
+
+							<button class="exit-btn" id="regresar7"><span class="fas fa-undo"></span><span
+								class="tab-text">Regresar</span></button>
+
 						</div>
 						<div class="footer">
 							<h3>Derechos Reservados &copy;</h3>
@@ -767,25 +767,24 @@
 							<span class="close" id="close8">&times;</span>
 						</div>
 						<div class="modal-body">
-							<!--
-							<img id="rotator8" src="img/animacionCompletez2.gif">
-							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
-									onclick="unfreeze_gif('rotator8', 'img/animacionCompletez2.gif')" /></center>
-							-->
 
 							<canvas id="completez2c" class="animation" width="800px" height="400px"></canvas>
 							<br>
 							<label for="completez2v">Velocidad de animación</label>
-							<input id="completez2v" type="range" min="1000" max="4000" step="100">
+							<input id="completez2v" type="range" min="-4000" max="-1000" step="100">
 
 							<center>
 								<button id="boton-completez2-toBack" class="interact-btn"><span
-									class="fas fa-backward"></span></button>
+										class="fas fa-backward"></span></button>
 								<button id="boton-completez2" class="interact-btn">Pausar</button>
 								<button id="boton-completez2-toFront" class="interact-btn"><span
-									class="fas fa-forward"></span></button>
+										class="fas fa-forward"></span></button>
 								<button id="boton-completez2-repeat" class="interact-btn">Repetir</button>
 							</center>
+
+							<button class="exit-btn" id="regresar8"><span class="fas fa-undo"></span><span
+								class="tab-text">Regresar</span></button>
+
 						</div>
 						<div class="footer">
 							<h3>Derechos Reservados &copy;</h3>
@@ -802,24 +801,24 @@
 							<span class="close" id="close9">&times;</span>
 						</div>
 						<div class="modal-body">
-							<!--
-							<img id="rotator9" src="img/animacionCorreccion.gif">
-							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
-									onclick="unfreeze_gif('rotator9', 'img/animacionCorreccion.gif')" /></center>
-							-->
+
 							<canvas id="correccionc" class="animation" width="800px" height="400px"></canvas>
 							<br>
 							<label for="correccionv">Velocidad de animación</label>
-							<input id="correccionv" type="range" min="1000" max="4000" step="100">
+							<input id="correccionv" type="range" min="-4000" max="-1000" step="100">
 
 							<center>
 								<button id="boton-correccion-toBack" class="interact-btn"><span
-									class="fas fa-backward"></span></button>
+										class="fas fa-backward"></span></button>
 								<button id="boton-correccion" class="interact-btn">Pausar</button>
 								<button id="boton-correccion-toFront" class="interact-btn"><span
-									class="fas fa-forward"></span></button>
+										class="fas fa-forward"></span></button>
 								<button id="boton-correccion-repeat" class="interact-btn">Repetir</button>
 							</center>
+
+							<button class="exit-btn" id="regresar9"><span class="fas fa-undo"></span><span
+								class="tab-text">Regresar</span></button>
+
 						</div>
 
 						<div class="footer">
@@ -837,24 +836,24 @@
 							<span class="close" id="close10">&times;</span>
 						</div>
 						<div class="modal-body">
-							<!--
-							<img id="rotator10" src="img/ejemplo1.gif">
-							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
-									onclick="unfreeze_gif('rotator10', 'img/ejemplo1.gif')" /></center>
-							-->
+
 							<canvas id="ejemplo1c" class="animation" width="800px" height="400px"></canvas>
 							<br>
 							<label for="ejemplo1v">Velocidad de animación</label>
-							<input id="ejemplo1v" type="range" min="1000" max="4000" step="100">
+							<input id="ejemplo1v" type="range" min="-4000" max="-1000" step="100">
 
 							<center>
 								<button id="boton-ejemplo1-toBack" class="interact-btn"><span
-									class="fas fa-backward"></span></button>
+										class="fas fa-backward"></span></button>
 								<button id="boton-ejemplo1" class="interact-btn">Pausar</button>
 								<button id="boton-ejemplo1-toFront" class="interact-btn"><span
-									class="fas fa-forward"></span></button>
+										class="fas fa-forward"></span></button>
 								<button id="boton-ejemplo1-repeat" class="interact-btn">Repetir</button>
 							</center>
+
+							<button class="exit-btn" id="regresar10"><span class="fas fa-undo"></span><span
+								class="tab-text">Regresar</span></button>
+
 						</div>
 						<div class="footer">
 							<h3>Derechos Reservados &copy;</h3>
@@ -871,24 +870,24 @@
 							<span class="close" id="close11">&times;</span>
 						</div>
 						<div class="modal-body">
-							<!--
-							<img id="rotator11" src="img/ejemplo2.gif">
-							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
-									onclick="unfreeze_gif('rotator11', 'img/ejemplo2.gif')" /></center>
-							-->
+
 							<canvas id="ejemplo2c" class="animation" width="800px" height="400px"></canvas>
 							<br>
 							<label for="ejemplo2v">Velocidad de animación</label>
-							<input id="ejemplo2v" type="range" min="1000" max="4000" step="100">
+							<input id="ejemplo2v" type="range" min="-4000" max="-1000" step="100">
 
 							<center>
 								<button id="boton-ejemplo2-toBack" class="interact-btn"><span
-									class="fas fa-backward"></span></button>
+										class="fas fa-backward"></span></button>
 								<button id="boton-ejemplo2" class="interact-btn">Pausar</button>
 								<button id="boton-ejemplo2-toFront" class="interact-btn"><span
-									class="fas fa-forward"></span></button>
+										class="fas fa-forward"></span></button>
 								<button id="boton-ejemplo2-repeat" class="interact-btn">Repetir</button>
 							</center>
+
+							<button class="exit-btn" id="regresar11"><span class="fas fa-undo"></span><span
+								class="tab-text">Regresar</span></button>
+
 						</div>
 						<div class="footer">
 							<h3>Derechos Reservados &copy;</h3>
@@ -905,24 +904,24 @@
 							<span class="close" id="close12">&times;</span>
 						</div>
 						<div class="modal-body">
-							<!--
-							<img id="rotator12" src="img/ejemplo3.gif">
-							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
-									onclick="unfreeze_gif('rotator12', 'img/ejemplo3.gif')" /></center>
-							-->
+
 							<canvas id="ejemplo3c" class="animation" width="800px" height="400px"></canvas>
 							<br>
 							<label for="ejemplo3v">Velocidad de animación</label>
-							<input id="ejemplo3v" type="range" min="1000" max="4000" step="100">
+							<input id="ejemplo3v" type="range" min="-4000" max="-1000" step="100">
 
 							<center>
 								<button id="boton-ejemplo3-toBack" class="interact-btn"><span
-									class="fas fa-backward"></span></button>
+										class="fas fa-backward"></span></button>
 								<button id="boton-ejemplo3" class="interact-btn">Pausar</button>
 								<button id="boton-ejemplo3-toFront" class="interact-btn"><span
-									class="fas fa-forward"></span></button>
+										class="fas fa-forward"></span></button>
 								<button id="boton-ejemplo3-repeat" class="interact-btn">Repetir</button>
 							</center>
+
+							<button class="exit-btn" id="regresar12"><span class="fas fa-undo"></span><span
+								class="tab-text">Regresar</span></button>
+
 						</div>
 						<div class="footer">
 							<h3>Derechos Reservados &copy;</h3>
@@ -939,24 +938,24 @@
 							<span class="close" id="close13">&times;</span>
 						</div>
 						<div class="modal-body">
-							<!--
-							<img id="rotator13" src="img/ejemplo4.gif">
-							<center><input class="botonReinicio" value="Reiniciar Animación" type="button"
-									onclick="unfreeze_gif('rotator13', 'img/ejemplo4.gif')" /></center>
-							-->
+
 							<canvas id="ejemplo4c" class="animation" width="800px" height="400px"></canvas>
 							<br>
 							<label for="ejemplo4v">Velocidad de animación</label>
-							<input id="ejemplo4v" type="range" min="1000" max="4000" step="100">
+							<input id="ejemplo4v" type="range" min="-4000" max="-1000" step="100">
 
 							<center>
 								<button id="boton-ejemplo4-toBack" class="interact-btn"><span
-									class="fas fa-backward"></span></button>
+										class="fas fa-backward"></span></button>
 								<button id="boton-ejemplo4" class="interact-btn">Pausar</button>
 								<button id="boton-ejemplo4-toFront" class="interact-btn"><span
-									class="fas fa-forward"></span></button>
+										class="fas fa-forward"></span></button>
 								<button id="boton-ejemplo4-repeat" class="interact-btn">Repetir</button>
 							</center>
+
+							<button class="exit-btn" id="regresar13"><span class="fas fa-undo"></span><span
+								class="tab-text">Regresar</span></button>
+
 						</div>
 						<div class="footer">
 							<h3>Derechos Reservados &copy;</h3>
@@ -979,16 +978,20 @@
 							<canvas id="generadorc" class="animation" width="800px" height="400px"></canvas>
 							<br>
 							<label for="generadorv">Velocidad de animación</label>
-							<input id="generadorv" type="range" min="1000" max="4000" step="100">
+							<input id="generadorv" type="range" min="-4000" max="-1000" step="100">
 
 							<center>
 								<button id="boton-generador-toBack" class="interact-btn"><span
-									class="fas fa-backward"></span></button>
+										class="fas fa-backward"></span></button>
 								<button id="boton-generador" class="interact-btn">Pausar</button>
 								<button id="boton-generador-toFront" class="interact-btn"><span
-									class="fas fa-forward"></span></button>
+										class="fas fa-forward"></span></button>
 								<button id="boton-generador-repeat" class="interact-btn">Repetir</button>
 							</center>
+
+							<button class="exit-btn" id="regresarGenerador"><span class="fas fa-undo"></span><span
+								class="tab-text">Regresar</span></button>
+
 						</div>
 						<div class="footer">
 							<h3>Derechos Reservados &copy;</h3>

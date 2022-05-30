@@ -37,12 +37,13 @@ class Timer {
  * @param {*} animacion Nombre de la animación
  * @param {*} closer Nombre de el icono que cierra la ventana modal.
  */
-function Animador(frames, direc, animacion, closer) {
+function Animador(frames, direc, animacion, closer, regresar) {
 
     this.frames = frames;
     this.direc = direc;
     this.animacion = animacion;
     this.closer = closer;
+    this.regresar = regresar;
 
 
     var canvas = document.getElementById(animacion + "c");
@@ -57,6 +58,7 @@ function Animador(frames, direc, animacion, closer) {
         const inputVelocidad = document.querySelector("#" + animacion + "v");
         //const salidaVelocidad = document.querySelector("#out-" + animacion + "v"); //Se completa con out, debe ser similar a la entrada.
         const botonStoper = document.getElementById('' + closer);
+        const botonRegresar = document.getElementById('regresar' + regresar);
 
         //Control de reproducción
         const botonAvanzar = document.querySelector("#boton-" + animacion + "-toFront");
@@ -73,35 +75,54 @@ function Animador(frames, direc, animacion, closer) {
             control.stop();
         };
 
+        botonRegresar.onclick = () => {
+            contadorDeFrames = 1;
+            control.reset();
+            control.stop();
+        };
+
         inputVelocidad.oninput = () => {
             control.stop();
             //reiniciamos el contador de frames al mover algo acá.
             contadorDeFrames = 1;
 
             //salidaVelocidad.innerHTML = inputVelocidad.value;
-            velocidadAnimacion = parseInt(inputVelocidad.value);
-            control.reset(parseInt(inputVelocidad.value));
+            velocidadAnimacion = parseInt(inputVelocidad.value * -1);
+            control.reset(parseInt(inputVelocidad.value * -1));
         };
 
+
         botonVelocidad.onclick = () => {
+            if (contadorDeFrames == frames || contadorDeFrames >= frames) {
+                contadorDeFrames = 1;
+            }
+            botonVelocidad.classList.toggle("paused");
             if (reproduciendo == true) { //Debe pausar
                 control.stop();
-                botonVelocidad.innerHTML = 'Reanudar'; //Debe reanudar
+                botonVelocidad.value = 'reanudar'; //Debe reanudar
                 reproduciendo = false;
             } else {
                 control.start();
-                botonVelocidad.innerHTML = 'Pausar'; //Debe pausar
+                botonVelocidad.value = 'pausar'; //Debe pausar
                 reproduciendo = true;
             }
         };
 
 
         botonAvanzar.onclick = () => {
-            contadorDeFrames = contadorDeFrames + 1;
+            if (contadorDeFrames == frames) {
+                contadorDeFrames = contadorDeFrames;
+            } else if (contadorDeFrames <= frames) {
+                contadorDeFrames += 3;
+            }
         };
 
         botonRetroceder.onclick = () => {
-            contadorDeFrames = contadorDeFrames - 3;
+            if (contadorDeFrames > 5) {
+                contadorDeFrames = contadorDeFrames - 5;
+            } else {
+                contadorDeFrames = 1;
+            }
         };
 
         botonRepetir.onclick = () => {
@@ -130,7 +151,7 @@ function Animador(frames, direc, animacion, closer) {
                 control.stop();
                 reproduciendo = false;
             }
-            console.log("Mostrando este mensaje cada:" + velocidadAnimacion);
+            console.log("Mostrando este mensaje cada:" + velocidadAnimacion + " Con contador en: " + contadorDeFrames);
 
             if (contadorDeFrames > frames + 2) {
                 alert("Ha habido un error de conteo. Recarga la página por favor.");
@@ -138,10 +159,10 @@ function Animador(frames, direc, animacion, closer) {
 
             diapositiva.src = direc + contadorDeFrames + ".PNG";
             ctx.drawImage(diapositiva, 60, 0, 700, 393);
-            
+
             contadorDeFrames += 1;
-            
-        }, velocidadAnimacion);
+
+        }, velocidadAnimacion * -1);
 
     };
 
